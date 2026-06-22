@@ -37,3 +37,7 @@ To add a new product, copy an existing `.product-card` block, change the image f
 ## Contact info
 
 Phone number and WhatsApp link are set to +254 714 413777 in the Contact section of `index.html`.
+
+## Link preview (Open Graph)
+
+`index.html` has `og:image`/`og:url` tags pointing to `https://larrythuku18-lab.github.io/De-Beka_Collections-/` so the link shows a nice preview card when shared on WhatsApp/Instagram. That URL only resolves once GitHub Pages is enabled for this repo (Settings → Pages → deploy from `main`). If you host the site elsewhere instead, update those two tags in the `<head>` to match the real URL.
