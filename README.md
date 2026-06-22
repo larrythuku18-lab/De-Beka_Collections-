@@ -1,6 +1,6 @@
 # De'Beka Collections
 
-Website for Caroline Wanyonyi's clothing business.
+Website for Carolyne Wanyonyi's clothing business.
 
 ## Viewing the site
 
