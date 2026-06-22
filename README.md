@@ -9,7 +9,7 @@ npm install
 npm run dev
 ```
 
-Opens at `http://localhost:5173/De-Beka_Collections-/` (the `/De-Beka_Collections-/` base path matches the GitHub Pages project URL — see below).
+Opens at `http://localhost:5173/`.
 
 ## Building for production
 
@@ -20,7 +20,7 @@ npm run preview   # serve the built dist/ folder locally to sanity-check it
 
 ## Deploying
 
-Pushing to `main` automatically builds and deploys via `.github/workflows/deploy.yml`. One-time setup: in the GitHub repo, go to **Settings → Pages** and set **Source** to **GitHub Actions** (it defaults to "Deploy from a branch", which won't run the build). After that, every push to `main` publishes automatically.
+Live at **https://debekacollections.netlify.app/**. Netlify is connected directly to this GitHub repo and auto-builds on every push to `main` — `netlify.toml` tells it to run `npm run build` and publish `dist/`. No manual dashboard steps needed; just push.
 
 ## Project structure
 
@@ -51,4 +51,4 @@ A few things from past design briefs were deliberately left out because building
 
 ## Link preview (Open Graph)
 
-The page `<head>` has `og:image`/`og:url` tags pointing to `https://larrythuku18-lab.github.io/De-Beka_Collections-/` so the link shows a nice preview card when shared on WhatsApp/Instagram. If you host the site elsewhere, update those two tags in `index.html`.
+The page `<head>` has `og:image`/`og:url` tags pointing to `https://debekacollections.netlify.app/` so the link shows a nice preview card when shared on WhatsApp/Instagram. If you host the site elsewhere, update those two tags in `index.html`.
