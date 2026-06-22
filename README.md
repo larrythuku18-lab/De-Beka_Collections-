@@ -1,43 +1,54 @@
 # De'Beka Collections
 
-Website for Carolyne Wanyonyi's clothing business.
+Website for Carolyne Wanyonyi's clothing business. Built with React + Vite, Framer Motion for animation, and Lenis for smooth scrolling.
 
-## Viewing the site
+## Running locally
 
-Just open `index.html` in a browser — no build step or server needed.
+```
+npm install
+npm run dev
+```
 
-## Adding photos
+Opens at `http://localhost:5173/De-Beka_Collections-/` (the `/De-Beka_Collections-/` base path matches the GitHub Pages project URL — see below).
 
-Drop your photos into the matching folder, using the exact filenames below, and they'll appear on the site automatically. Until a photo is added, that product just shows a plain placeholder color.
+## Building for production
 
-**images/women/**
-- dress-floral.jpg — Floral Summer Dress
-- dress-ankara.jpg — Ankara Print Dress
-- blouse-chiffon.jpg — Chiffon Blouse
-- skirt-pencil.jpg — Pencil Skirt
+```
+npm run build
+npm run preview   # serve the built dist/ folder locally to sanity-check it
+```
 
-**images/men/**
-- shirt-checked.jpg — Checked Casual Shirt
-- jeans-denim.jpg — Slim Fit Denim Jeans
-- jacket-bomber.jpg — Bomber Jacket
-- tshirt-plain.jpg — Plain Cotton T-Shirt
+## Deploying
 
-**images/kids/**
-- dress-kids.jpg — Girls' Party Dress
-- set-boys.jpg — Boys' Shirt & Shorts Set
-- romper-baby.jpg — Baby Romper
-- school-set.jpg — Kids' Casual Set
+Pushing to `main` automatically builds and deploys via `.github/workflows/deploy.yml`. One-time setup: in the GitHub repo, go to **Settings → Pages** and set **Source** to **GitHub Actions** (it defaults to "Deploy from a branch", which won't run the build). After that, every push to `main` publishes automatically.
+
+## Project structure
+
+- `src/data/products.js` — the real product catalog (12 items). `tags` (`new`/`trending`/`premium`/`limited`) drive the editorial carousels on the homepage; `slot` (`top`/`bottom`/`outerwear`/`dress`/`set`) drives the Build Your Look picker.
+- `src/components/` — one file per section/feature.
+- `src/context/AppContext.jsx` — shared state: theme, wishlist, recently viewed, active quick view, search/filter.
+- `public/images/` — product photos, logo, and the Open Graph preview card.
+
+## Adding real product photos
+
+Drop photos into the matching folder using the exact filenames already referenced in `src/data/products.js` (e.g. `public/images/women/dress-floral.jpg`). Until a photo is added, that product just shows a plain placeholder color.
 
 ## Editing products and prices
 
-All product info (name, price range, description) lives directly in `index.html`, inside `<div class="product-card">` blocks. The example prices are placeholders — edit them to match real prices.
-
-To add a new product, copy an existing `.product-card` block, change the image filename, name, price and description.
+Edit `src/data/products.js` directly — each product is one object with `name`, `price`, `desc`, `image`, `category`, `slot`, and `tags`. No other file needs to change; the shop grid, editorial rows, Build Your Look, and quick view all read from this one list.
 
 ## Contact info
 
-Phone number and WhatsApp link are set to +254 728 871 796 in the Contact section of `index.html`.
+Phone number and WhatsApp link are set to +254 728 871 796 — defined once as `WHATSAPP_NUMBER` in `src/data/products.js`.
+
+## What's intentionally not built yet
+
+A few things from past design briefs were deliberately left out because building them would mean faking a capability the business doesn't actually have:
+
+- **Real checkout / cart / payments** — Carolyne doesn't have an M-Pesa Till yet. Every "buy" action routes to a WhatsApp message instead, which is how she actually closes sales today. Once she registers for M-Pesa for Business, a real payment step can replace this.
+- **Customer photo gallery & testimonials** — both are honest empty-state placeholders inviting real submissions, not invented quotes or stock photos.
+- **3D/360° product views, AI outfit rendering, hover pose-change photography** — all need real multi-angle photography or 3D assets that don't exist yet.
 
 ## Link preview (Open Graph)
 
-`index.html` has `og:image`/`og:url` tags pointing to `https://larrythuku18-lab.github.io/De-Beka_Collections-/` so the link shows a nice preview card when shared on WhatsApp/Instagram. That URL only resolves once GitHub Pages is enabled for this repo (Settings → Pages → deploy from `main`). If you host the site elsewhere instead, update those two tags in the `<head>` to match the real URL.
+The page `<head>` has `og:image`/`og:url` tags pointing to `https://larrythuku18-lab.github.io/De-Beka_Collections-/` so the link shows a nice preview card when shared on WhatsApp/Instagram. If you host the site elsewhere, update those two tags in `index.html`.
