@@ -263,6 +263,12 @@ nav a:hover {
   margin-bottom: 6px;
 }
 
+.filter-pills {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .filter-pill {
   text-align: left;
   background: transparent;
@@ -525,6 +531,19 @@ nav a:hover {
 @media (max-width: 768px) {
   .nav-toggle {
     display: block;
+    order: 2;
+  }
+
+  .theme-toggle {
+    order: 3;
+    flex-shrink: 0;
+  }
+
+  .logo {
+    order: 1;
+    font-size: 1.15rem;
+    flex-shrink: 1;
+    min-width: 0;
   }
 
   nav {
@@ -533,6 +552,7 @@ nav a:hover {
     width: 100%;
     background: rgba(26, 26, 26, 0.95);
     margin-left: 0;
+    order: 4;
   }
 
   nav.open {
@@ -547,6 +567,7 @@ nav a:hover {
 
   .nav-bar {
     flex-wrap: wrap;
+    gap: 10px;
   }
 
   .shop-layout {
@@ -556,8 +577,17 @@ nav a:hover {
   .filter-rail {
     position: static;
     width: 100%;
+    flex-direction: column;
+  }
+
+  .filter-pills {
     flex-direction: row;
     overflow-x: auto;
+    padding-bottom: 4px;
+  }
+
+  .filter-pill {
+    flex-shrink: 0;
   }
 
   .quickview-panel {
