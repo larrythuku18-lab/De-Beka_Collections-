@@ -59,3 +59,76 @@ function animate(time) {
 resizeCanvas();
 window.addEventListener('resize', resizeCanvas);
 requestAnimationFrame(animate);
+
+// Theme toggle (persisted in localStorage)
+const themeToggle = document.getElementById('themeToggle');
+const storedTheme = localStorage.getItem('debeka-theme');
+const initialTheme = storedTheme || 'dark';
+document.documentElement.setAttribute('data-theme', initialTheme);
+themeToggle.textContent = initialTheme === 'dark' ? '☀️' : '🌙';
+
+themeToggle.addEventListener('click', () => {
+  const current = document.documentElement.getAttribute('data-theme');
+  const next = current === 'dark' ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', next);
+  localStorage.setItem('debeka-theme', next);
+  themeToggle.textContent = next === 'dark' ? '☀️' : '🌙';
+});
+
+// Category filter rail
+const filterPills = document.querySelectorAll('.filter-pill');
+const productCards = document.querySelectorAll('.product-card');
+
+filterPills.forEach(pill => {
+  pill.addEventListener('click', () => {
+    filterPills.forEach(p => p.classList.remove('active'));
+    pill.classList.add('active');
+    const filter = pill.dataset.filter;
+    productCards.forEach(card => {
+      const matches = filter === 'all' || card.dataset.category === filter;
+      card.classList.toggle('is-hidden', !matches);
+    });
+  });
+});
+
+// Quick view panel
+const quickviewOverlay = document.getElementById('quickviewOverlay');
+const quickviewImage = document.getElementById('quickviewImage');
+const quickviewName = document.getElementById('quickviewName');
+const quickviewPrice = document.getElementById('quickviewPrice');
+const quickviewDesc = document.getElementById('quickviewDesc');
+const quickviewWhatsapp = document.getElementById('quickviewWhatsapp');
+const quickviewClose = document.getElementById('quickviewClose');
+const sizeButtons = document.querySelectorAll('.size-options button');
+
+function openQuickview(card) {
+  const { name, price, desc, image } = card.dataset;
+  quickviewImage.style.backgroundImage = `url('${image}')`;
+  quickviewName.textContent = name;
+  quickviewPrice.textContent = price;
+  quickviewDesc.textContent = desc;
+  quickviewWhatsapp.href = `https://wa.me/254714413777?text=${encodeURIComponent(
+    `Hi! I'm interested in the ${name} (${price}). Is it available?`
+  )}`;
+  sizeButtons.forEach(btn => btn.classList.remove('selected'));
+  quickviewOverlay.classList.add('open');
+}
+
+productCards.forEach(card => {
+  card.querySelector('[data-action="quickview"]').addEventListener('click', () => openQuickview(card));
+});
+
+sizeButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    sizeButtons.forEach(b => b.classList.remove('selected'));
+    btn.classList.add('selected');
+  });
+});
+
+quickviewClose.addEventListener('click', () => quickviewOverlay.classList.remove('open'));
+quickviewOverlay.addEventListener('click', e => {
+  if (e.target === quickviewOverlay) quickviewOverlay.classList.remove('open');
+});
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') quickviewOverlay.classList.remove('open');
+});
