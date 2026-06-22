@@ -107,7 +107,7 @@ function openQuickview(card) {
   quickviewName.textContent = name;
   quickviewPrice.textContent = price;
   quickviewDesc.textContent = desc;
-  quickviewWhatsapp.href = `https://wa.me/254714413777?text=${encodeURIComponent(
+  quickviewWhatsapp.href = `https://wa.me/254728871796?text=${encodeURIComponent(
     `Hi! I'm interested in the ${name} (${price}). Is it available?`
   )}`;
   sizeButtons.forEach(btn => btn.classList.remove('selected'));

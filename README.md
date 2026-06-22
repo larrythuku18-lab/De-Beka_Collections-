@@ -36,7 +36,7 @@ To add a new product, copy an existing `.product-card` block, change the image f
 
 ## Contact info
 
-Phone number and WhatsApp link are set to +254 714 413777 in the Contact section of `index.html`.
+Phone number and WhatsApp link are set to +254 728 871 796 in the Contact section of `index.html`.
 
 ## Link preview (Open Graph)
 
