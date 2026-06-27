@@ -20,7 +20,9 @@ npm run preview   # serve the built dist/ folder locally to sanity-check it
 
 ## Deploying
 
-Live at **https://debekacollections.netlify.app/**. Netlify is connected directly to this GitHub repo and auto-builds on every push to `main` — `netlify.toml` tells it to run `npm run build` and publish `dist/`. No manual dashboard steps needed; just push.
+Live at **https://de-beka-collections.vercel.app/**. Vercel is connected directly to this GitHub repo and auto-builds on every push to `main` — it auto-detects the Vite project, no config file needed. Just push.
+
+There's also a `netlify.toml` left in the repo from a previous attempt at hosting on Netlify (abandoned after builds got stuck disabled on that account with no obvious way to re-enable them from the dashboard). It's inert unless the site is reconnected to Netlify — safe to ignore.
 
 ## Project structure
 
