@@ -4,7 +4,7 @@ import { PRODUCTS, SLOT_LABELS, whatsappLink } from '../data/products.js';
 
 function lowEndPrice(priceRange) {
   const match = priceRange.match(/[\d,]+/);
-  return match ? parseInt(match[0].replace(/,/g, ''), 10) : 0;
+  return match ? parseInt(match[0].replace(/,/g, ''), 10) : null;
 }
 
 export default function BuildYourLook() {
@@ -20,7 +20,9 @@ export default function BuildYourLook() {
   }, []);
 
   const selectedProducts = Object.values(selections).filter(Boolean);
-  const total = selectedProducts.reduce((sum, p) => sum + lowEndPrice(p.price), 0);
+  const pricedProducts = selectedProducts.filter((p) => lowEndPrice(p.price) !== null);
+  const unpricedCount = selectedProducts.length - pricedProducts.length;
+  const total = pricedProducts.reduce((sum, p) => sum + lowEndPrice(p.price), 0);
 
   function selectForSlot(slot, productId) {
     const product = PRODUCTS.find((p) => p.id === productId);
@@ -81,7 +83,14 @@ export default function BuildYourLook() {
                     <li key={p.id}>{p.name} <span className="price">{p.price}</span></li>
                   ))}
                 </ul>
-                <p className="outfit-total">From KES {total.toLocaleString()}</p>
+                {pricedProducts.length > 0 ? (
+                  <p className="outfit-total">
+                    From KES {total.toLocaleString()}
+                    {unpricedCount > 0 && ' + ask Carolyne for the rest'}
+                  </p>
+                ) : (
+                  <p className="outfit-total">Ask Carolyne for pricing on this look</p>
+                )}
                 <a className="btn btn-whatsapp" href={whatsappLink(message)} target="_blank" rel="noopener noreferrer">
                   Enquire About This Look
                 </a>
