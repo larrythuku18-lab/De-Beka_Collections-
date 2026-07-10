@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { motion, useMotionValue, useTransform } from 'framer-motion';
 import { useApp } from '../context/AppContext.jsx';
 import { CATEGORY_LABELS } from '../data/products.js';
@@ -5,6 +6,9 @@ import { CATEGORY_LABELS } from '../data/products.js';
 export default function ProductCard({ product }) {
   const { openQuickView, wishlist, toggleWishlist } = useApp();
   const isWishlisted = wishlist.includes(product.id);
+  const [showBack, setShowBack] = useState(false);
+  const hasBack = Boolean(product.imageBack);
+  const displayImage = hasBack && showBack ? product.imageBack : product.image;
 
   const rotateX = useMotionValue(0);
   const rotateY = useMotionValue(0);
@@ -42,7 +46,17 @@ export default function ProductCard({ product }) {
       >
         {isWishlisted ? '♥' : '♡'}
       </button>
-      <div className="product-image" style={{ backgroundImage: `url('${product.image}')` }} />
+      <div className="product-image" style={{ backgroundImage: `url('${displayImage}')` }}>
+        {hasBack && (
+          <button
+            className="flip-btn"
+            onClick={(e) => { e.stopPropagation(); setShowBack((v) => !v); }}
+            aria-label={showBack ? 'Show front' : 'Show back'}
+          >
+            {showBack ? '← Front' : 'Back →'}
+          </button>
+        )}
+      </div>
       <div className="product-info">
         <p className="eyebrow">{CATEGORY_LABELS[product.category]}</p>
         <h3>{product.name}</h3>

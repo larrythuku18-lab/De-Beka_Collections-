@@ -668,6 +668,34 @@ button {
   background-color: var(--placeholder-bg);
   background-size: cover;
   background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.flip-btn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 5px 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+  transition: background 0.2s;
+  z-index: 2;
+}
+.flip-btn:hover { background: rgba(0, 0, 0, 0.78); }
+
+.flip-btn--quickview {
+  bottom: 12px;
+  right: 12px;
+  font-size: 0.8rem;
+  padding: 6px 14px;
 }
 
 .product-info { padding: 18px; }

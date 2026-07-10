@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useApp } from '../context/AppContext.jsx';
 import { relatedTo, whatsappLink } from '../data/products.js';
@@ -8,9 +8,16 @@ const SIZES = ['S', 'M', 'L', 'XL'];
 export default function QuickView() {
   const { quickViewProduct, closeQuickView, openQuickView, wishlist, toggleWishlist } = useApp();
   const [selectedSize, setSelectedSize] = useState(null);
+  const [showBack, setShowBack] = useState(false);
+
+  useEffect(() => {
+    setShowBack(false);
+    setSelectedSize(null);
+  }, [quickViewProduct?.id]);
 
   function handleOpenRelated(product) {
     setSelectedSize(null);
+    setShowBack(false);
     openQuickView(product);
   }
 
@@ -18,6 +25,8 @@ export default function QuickView() {
   const product = quickViewProduct;
   const related = relatedTo(product);
   const isWishlisted = wishlist.includes(product.id);
+  const hasBack = Boolean(product.imageBack);
+  const displayImage = hasBack && showBack ? product.imageBack : product.image;
   const message = `Hi! I'm interested in the ${product.name} (${product.price})${selectedSize ? `, size ${selectedSize}` : ''}. Is it available?`;
 
   return (
@@ -37,7 +46,17 @@ export default function QuickView() {
           transition={{ duration: 0.2 }}
         >
           <button className="quickview-close" onClick={closeQuickView} aria-label="Close">&times;</button>
-          <div className="quickview-image" style={{ backgroundImage: `url('${product.image}')` }} />
+          <div className="quickview-image" style={{ backgroundImage: `url('${displayImage}')` }}>
+            {hasBack && (
+              <button
+                className="flip-btn flip-btn--quickview"
+                onClick={() => setShowBack((v) => !v)}
+                aria-label={showBack ? 'Show front' : 'Show back'}
+              >
+                {showBack ? '← Front' : 'Back →'}
+              </button>
+            )}
+          </div>
           <div className="quickview-details">
             <div className="quickview-title-row">
               <h3>{product.name}</h3>
