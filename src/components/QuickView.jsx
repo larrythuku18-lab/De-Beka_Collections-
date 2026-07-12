@@ -27,7 +27,9 @@ export default function QuickView() {
   const isWishlisted = wishlist.includes(product.id);
   const hasBack = Boolean(product.imageBack);
   const displayImage = hasBack && showBack ? product.imageBack : product.image;
-  const message = `Hi! I'm interested in the ${product.name} (${product.price})${selectedSize ? `, size ${selectedSize}` : ''}. Is it available?`;
+  const message = product.sold
+    ? `Hi! I saw the ${product.name} is marked sold. Will it be restocked, or do you have something similar?`
+    : `Hi! I'm interested in the ${product.name} (${product.price})${selectedSize ? `, size ${selectedSize}` : ''}. Is it available?`;
 
   return (
     <AnimatePresence>
@@ -47,6 +49,7 @@ export default function QuickView() {
         >
           <button className="quickview-close" onClick={closeQuickView} aria-label="Close">&times;</button>
           <div className="quickview-image" style={{ backgroundImage: `url('${displayImage}')` }}>
+            {product.sold && <span className="sold-badge">Sold</span>}
             {hasBack && (
               <button
                 className="flip-btn flip-btn--quickview"

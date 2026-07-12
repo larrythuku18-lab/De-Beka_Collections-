@@ -691,6 +691,22 @@ button {
 }
 .flip-btn:hover { background: rgba(0, 0, 0, 0.78); }
 
+.sold-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(178, 34, 34, 0.92);
+  color: #fff;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  z-index: 2;
+  pointer-events: none;
+}
+
 .flip-btn--quickview {
   bottom: 12px;
   right: 12px;
@@ -742,7 +758,7 @@ button {
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
 }
 
-.quickview-image { background-color: var(--placeholder-bg); background-size: cover; background-position: center; min-height: 280px; }
+.quickview-image { background-color: var(--placeholder-bg); background-size: cover; background-position: center; min-height: 280px; position: relative; overflow: hidden; }
 .quickview-details { padding: 32px; display: flex; flex-direction: column; }
 .quickview-title-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
 .quickview-details h3 { font-size: 1.5rem; margin-bottom: 8px; }

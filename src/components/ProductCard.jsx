@@ -47,6 +47,7 @@ export default function ProductCard({ product }) {
         {isWishlisted ? '♥' : '♡'}
       </button>
       <div className="product-image" style={{ backgroundImage: `url('${displayImage}')` }}>
+        {product.sold && <span className="sold-badge">Sold</span>}
         {hasBack && (
           <button
             className="flip-btn"

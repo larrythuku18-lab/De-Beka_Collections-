@@ -1,0 +1,1034 @@
+[
+  {
+    "id": "white-pink-floral-halter-midi",
+    "name": "White Floral Halter Midi",
+    "price": "Ask Carolyne",
+    "desc": "White midi with pink and blue floral print, halter/racerback neckline.",
+    "image": "images/women/dresses/white-pink-floral-halter-midi.jpg",
+    "category": "women",
+    "slot": "dress",
+    "tags": []
+  },
+  {
+    "id": "red-cream-floral-bellsleeve-midi",
+    "name": "Red Botanical Floral Midi",
+    "price": "Ask Carolyne",
+    "desc": "Rich red midi with cream botanical print, long bell sleeves, elastic waist and ruffle hem.",
+    "image": "images/women/dresses/red-cream-floral-bellsleeve-midi.jpg",
+    "imageBack": "images/women/dresses/red-cream-floral-bellsleeve-midi-back.jpg",
+    "category": "women",
+    "slot": "dress",
+    "tags": []
+  },
+  {
+    "id": "red-cowl-spaghetti-maxi",
+    "name": "Red Cowl Spaghetti Maxi",
+    "price": "Ask Carolyne",
+    "desc": "Floor-length red maxi with a draped cowl neckline and spaghetti straps — sleek and elegant.",
+    "image": "images/women/dresses/red-cowl-spaghetti-maxi.jpg",
+    "imageBack": "images/women/dresses/red-cowl-spaghetti-maxi-back.jpg",
+    "category": "women",
+    "slot": "dress",
+    "tags": [
+      "trending"
+    ]
+  },
+  {
+    "id": "red-ruched-spaghetti-midi",
+    "name": "Red Ruched Spaghetti Midi",
+    "price": "Ask Carolyne",
+    "desc": "Flirty red midi with a ruched bust, A-line skirt, spaghetti straps and a waist tie.",
+    "image": "images/women/dresses/red-ruched-spaghetti-midi.jpg",
+    "imageBack": "images/women/dresses/red-ruched-spaghetti-midi-back.jpg",
+    "category": "women",
+    "slot": "dress",
+    "tags": []
+  },
+  {
+    "id": "beige-rust-paisley-midi",
+    "name": "Beige Paisley Midi",
+    "price": "Ask Carolyne",
+    "desc": "Warm-toned paisley and ornate print midi, short-sleeve flared silhouette in beige and rust.",
+    "image": "images/women/dresses/beige-rust-paisley-midi.jpg",
+    "imageBack": "images/women/dresses/beige-rust-paisley-midi-back.jpg",
+    "category": "women",
+    "slot": "dress",
+    "tags": []
+  },
+  {
+    "id": "charcoal-sleeveless-shift-mini",
+    "name": "Charcoal Sleeveless Mini",
+    "price": "Ask Carolyne",
+    "desc": "Sharp charcoal sleeveless bodycon shift — clean lines, goes from day to night.",
+    "image": "images/women/dresses/charcoal-sleeveless-shift-mini.jpg",
+    "imageBack": "images/women/dresses/charcoal-sleeveless-shift-mini-back.jpg",
+    "category": "women",
+    "slot": "dress",
+    "tags": [
+      "trending"
+    ]
+  },
+  {
+    "id": "black-white-polka-dot-ruched-midi",
+    "name": "Black & White Polka Dot Midi",
+    "price": "Ask Carolyne",
+    "desc": "Classic black and white polka dot midi with 3/4 sleeves and a flattering ruched waist.",
+    "image": "images/women/dresses/black-white-polka-dot-ruched-midi.jpg",
+    "imageBack": "images/women/dresses/black-white-polka-dot-ruched-midi-back.jpg",
+    "category": "women",
+    "slot": "dress",
+    "tags": []
+  },
+  {
+    "id": "black-chiffon-rose-embroidery-maxi",
+    "name": "Black Rose Embroidery Maxi",
+    "price": "Ask Carolyne",
+    "desc": "Black chiffon V-neck with red rose vine embroidery, asymmetric ruffle hem and open back.",
+    "image": "images/women/dresses/black-chiffon-rose-embroidery-maxi.jpg",
+    "imageBack": "images/women/dresses/black-chiffon-rose-embroidery-maxi-back.jpg",
+    "category": "women",
+    "slot": "dress",
+    "tags": [
+      "premium"
+    ]
+  },
+  {
+    "id": "peach-ditsy-floral-flutter-midi",
+    "name": "Peach Ditsy Floral Midi",
+    "price": "Ask Carolyne",
+    "desc": "Soft peach midi with ditsy floral print, button-front placket and flutter sleeves.",
+    "image": "images/women/dresses/peach-ditsy-floral-flutter-midi.jpg",
+    "imageBack": "images/women/dresses/peach-ditsy-floral-flutter-midi-back.jpg",
+    "category": "women",
+    "slot": "dress",
+    "tags": [
+      "new"
+    ]
+  },
+  {
+    "id": "navy-floral-button-3quarter-midi",
+    "name": "Navy Floral Button-Front Midi",
+    "price": "Ask Carolyne",
+    "desc": "Dark navy midi with delicate white floral print, button-front placket and 3/4 sleeves.",
+    "image": "images/women/dresses/navy-floral-button-3quarter-midi.jpg",
+    "imageBack": "images/women/dresses/navy-floral-button-3quarter-midi-back.jpg",
+    "category": "women",
+    "slot": "dress",
+    "tags": []
+  },
+  {
+    "id": "blush-pleated-spaghetti-maxi",
+    "name": "Blush Accordion-Pleated Maxi",
+    "price": "Ask Carolyne",
+    "desc": "Champagne blush accordion-pleated maxi with spaghetti straps — effortlessly graceful.",
+    "image": "images/women/dresses/blush-pleated-spaghetti-maxi.jpg",
+    "imageBack": "images/women/dresses/blush-pleated-spaghetti-maxi-back.jpg",
+    "category": "women",
+    "slot": "dress",
+    "tags": [
+      "new",
+      "trending"
+    ]
+  },
+  {
+    "id": "charcoal-rose-spaghetti-maxi",
+    "name": "Charcoal Rose Print Maxi",
+    "price": "Ask Carolyne",
+    "desc": "Dark charcoal spaghetti strap bodycon maxi with a soft pink rose print.",
+    "image": "images/women/dresses/charcoal-rose-spaghetti-maxi.jpg",
+    "imageBack": "images/women/dresses/charcoal-rose-spaghetti-maxi-back.jpg",
+    "category": "women",
+    "slot": "dress",
+    "tags": []
+  },
+  {
+    "id": "blue-off-shoulder-boho-hi-lo",
+    "name": "Blue Off-Shoulder Boho Dress",
+    "price": "Ask Carolyne",
+    "desc": "Blue boho ornate print hi-lo dress with an off-shoulder neckline and self-tie belt.",
+    "image": "images/women/dresses/blue-off-shoulder-boho-hi-lo.jpg",
+    "imageBack": "images/women/dresses/blue-off-shoulder-boho-hi-lo-back.jpg",
+    "category": "women",
+    "slot": "dress",
+    "tags": [
+      "trending"
+    ]
+  },
+  {
+    "id": "black-white-stripe-halter-maxi",
+    "name": "Black & White Stripe Halter Maxi",
+    "price": "Ask Carolyne",
+    "desc": "Bold black and white horizontal stripe halter maxi with a red accent stripe and open cross-back ties.",
+    "image": "images/women/dresses/black-white-stripe-halter-maxi.jpg",
+    "imageBack": "images/women/dresses/black-white-stripe-halter-maxi-back.jpg",
+    "category": "women",
+    "slot": "dress",
+    "tags": []
+  },
+  {
+    "id": "charcoal-colorblock-deep-v-maxi",
+    "name": "Charcoal Colourblock Deep-V Maxi",
+    "price": "Ask Carolyne",
+    "desc": "Two-tone charcoal grey maxi with sheer panel inserts and a plunging deep-V neckline.",
+    "image": "images/women/dresses/charcoal-colorblock-deep-v-maxi.jpg",
+    "imageBack": "images/women/dresses/charcoal-colorblock-deep-v-maxi-back.jpg",
+    "category": "women",
+    "slot": "dress",
+    "tags": []
+  },
+  {
+    "id": "multicolor-swirl-short-sleeve-midi",
+    "name": "Multicolor Swirl Midi",
+    "price": "Ask Carolyne",
+    "desc": "Vibrant abstract swirl print bodycon midi with short sleeves — orange, pink, blue and purple.",
+    "image": "images/women/dresses/multicolor-swirl-short-sleeve-midi.jpg",
+    "imageBack": "images/women/dresses/multicolor-swirl-short-sleeve-midi-back.jpg",
+    "category": "women",
+    "slot": "dress",
+    "tags": [
+      "new"
+    ]
+  },
+  {
+    "id": "blush-botanical-sleeveless-midi",
+    "name": "Blush Botanical Flared Midi",
+    "price": "Ask Carolyne",
+    "desc": "Blush and peach sleeveless midi with a delicate botanical ditsy print and flared skirt.",
+    "image": "images/women/dresses/blush-botanical-sleeveless-midi.jpg",
+    "imageBack": "images/women/dresses/blush-botanical-sleeveless-midi-back.jpg",
+    "category": "women",
+    "slot": "dress",
+    "tags": []
+  },
+  {
+    "id": "hot-pink-square-neck-pocket-maxi",
+    "name": "Hot Pink Square-Neck Pocket Maxi",
+    "price": "Ask Carolyne",
+    "desc": "Fuchsia sleeveless maxi with a square neckline and side pockets — bold and practical.",
+    "image": "images/women/dresses/hot-pink-square-neck-pocket-maxi.jpg",
+    "imageBack": "images/women/dresses/hot-pink-square-neck-pocket-maxi-back.jpg",
+    "category": "women",
+    "slot": "dress",
+    "tags": []
+  },
+  {
+    "id": "black-sequin-grey-tulle-formal-midi",
+    "name": "Black Sequin & Grey Tulle Formal Midi",
+    "price": "Ask Carolyne",
+    "desc": "Party-ready midi with a black sequin bodice, grey accordion-pleated tulle skirt and ribbon bow belt.",
+    "image": "images/women/dresses/black-sequin-grey-tulle-formal-midi.jpg",
+    "imageBack": "images/women/dresses/black-sequin-grey-tulle-formal-midi-back.jpg",
+    "category": "women",
+    "slot": "dress",
+    "tags": [
+      "premium"
+    ]
+  },
+  {
+    "id": "denim-blue-lace-open-back-gown",
+    "name": "Denim Blue Lace Open-Back Gown",
+    "price": "Ask Carolyne",
+    "desc": "Slate blue lace long-sleeve V-neck floor-length gown with a dramatic open back.",
+    "image": "images/women/dresses/denim-blue-lace-open-back-gown.jpg",
+    "imageBack": "images/women/dresses/denim-blue-lace-open-back-gown-back.jpg",
+    "category": "women",
+    "slot": "dress",
+    "tags": [
+      "premium"
+    ]
+  },
+  {
+    "id": "black-orange-floral-smocked-midi",
+    "name": "Black Orange Floral Smocked Midi",
+    "price": "Ask Carolyne",
+    "desc": "Black chiffon midi with orange floral print, smocked bodice and ruffle hem — boho-romantic.",
+    "image": "images/women/dresses/black-orange-floral-smocked-midi.jpg",
+    "imageBack": "images/women/dresses/black-orange-floral-smocked-midi-back.jpg",
+    "category": "women",
+    "slot": "dress",
+    "tags": []
+  },
+  {
+    "id": "black-yellow-ikat-spaghetti-maxi",
+    "name": "Black & Yellow Ikat Spaghetti Maxi",
+    "price": "Ask Carolyne",
+    "desc": "Black maxi with yellow and lime ikat geometric print and spaghetti straps, with a matching border hem.",
+    "image": "images/women/dresses/black-yellow-ikat-spaghetti-maxi.jpg",
+    "imageBack": "images/women/dresses/black-yellow-ikat-spaghetti-maxi-back.jpg",
+    "category": "women",
+    "slot": "dress",
+    "tags": []
+  },
+  {
+    "id": "brown-white-leaf-print-shift-mini",
+    "name": "Brown & White Leaf Print Mini",
+    "price": "Ask Carolyne",
+    "desc": "Chocolate brown sleeveless A-line shift with a bold white tropical leaf print.",
+    "image": "images/women/dresses/brown-white-leaf-print-shift-mini.jpg",
+    "imageBack": "images/women/dresses/brown-white-leaf-print-shift-mini-back.jpg",
+    "category": "women",
+    "slot": "dress",
+    "tags": [
+      "new"
+    ]
+  },
+  {
+    "id": "lemon-yellow-lace-halter-maxi",
+    "name": "Lemon Yellow Lace Halter Maxi",
+    "price": "Ask Carolyne",
+    "desc": "Lemon yellow floor-length halter maxi with a lace-trim open back — bright and elegant.",
+    "image": "images/women/dresses/lemon-yellow-lace-halter-maxi.jpg",
+    "imageBack": "images/women/dresses/lemon-yellow-lace-halter-maxi-back.jpg",
+    "category": "women",
+    "slot": "dress",
+    "tags": []
+  },
+  {
+    "id": "charcoal-halter-crossback-hi-lo",
+    "name": "Charcoal Halter Crossback Hi-Lo",
+    "price": "Ask Carolyne",
+    "desc": "Charcoal halter dress with a crossback cutout and asymmetric hi-lo hemline.",
+    "image": "images/women/dresses/charcoal-halter-crossback-hi-lo.jpg",
+    "imageBack": "images/women/dresses/charcoal-halter-crossback-hi-lo-back.jpg",
+    "category": "women",
+    "slot": "dress",
+    "tags": []
+  },
+  {
+    "id": "green-pink-floral-tiered-midi",
+    "name": "Emerald & Hot Pink Floral Tiered Midi",
+    "price": "Ask Carolyne",
+    "desc": "Emerald green and hot pink bold floral sleeveless midi with a collared neckline and tiered skirt.",
+    "image": "images/women/dresses/green-pink-floral-tiered-midi.jpg",
+    "imageBack": "images/women/dresses/green-pink-floral-tiered-midi-back.jpg",
+    "category": "women",
+    "slot": "dress",
+    "tags": []
+  },
+  {
+    "id": "black-sleeveless-bodycon-maxi",
+    "name": "Black Sleeveless Bodycon Maxi",
+    "price": "Ask Carolyne",
+    "desc": "Simple, sleek black maxi with wide sleeveless straps and a clean bodycon silhouette.",
+    "image": "images/women/dresses/black-sleeveless-bodycon-maxi.jpg",
+    "imageBack": "images/women/dresses/black-sleeveless-bodycon-maxi-back.jpg",
+    "category": "women",
+    "slot": "dress",
+    "tags": []
+  },
+  {
+    "id": "teal-asymmetric-short-sleeve-midi",
+    "name": "Teal Asymmetric Drape Midi",
+    "price": "Ask Carolyne",
+    "desc": "Teal midi with an asymmetric draped neckline, short sleeves and an elastic waist.",
+    "image": "images/women/dresses/teal-asymmetric-short-sleeve-midi.jpg",
+    "imageBack": "images/women/dresses/teal-asymmetric-short-sleeve-midi-back.jpg",
+    "category": "women",
+    "slot": "dress",
+    "tags": [
+      "new"
+    ]
+  },
+  {
+    "id": "royal-blue-ruched-cap-sleeve-midi",
+    "name": "Royal Blue Ruched Cap-Sleeve Midi",
+    "price": "Ask Carolyne",
+    "desc": "Royal blue cap-sleeve bodycon pencil midi with all-over ruching — figure-flattering.",
+    "image": "images/women/dresses/royal-blue-ruched-cap-sleeve-midi.jpg",
+    "imageBack": "images/women/dresses/royal-blue-ruched-cap-sleeve-midi-back.jpg",
+    "category": "women",
+    "slot": "dress",
+    "tags": [
+      "trending"
+    ]
+  },
+  {
+    "id": "peach-cream-colorblock-ribbed-midi",
+    "name": "Peach Colourblock Ribbed Midi",
+    "price": "Ask Carolyne",
+    "desc": "Peach and cream two-tone deep-V colourblock ribbed bodycon midi.",
+    "image": "images/women/dresses/peach-cream-colorblock-ribbed-midi.jpg",
+    "category": "women",
+    "slot": "dress",
+    "tags": []
+  },
+  {
+    "id": "black-white-leaf-twist-front-wrap",
+    "name": "Black & White Leaf Wrap Dress",
+    "price": "Ask Carolyne",
+    "desc": "Black and white bold leaf print midi with a twist-front V-neck and 3/4 sleeves.",
+    "image": "images/women/dresses/black-white-leaf-twist-front-wrap.jpg",
+    "imageBack": "images/women/dresses/black-white-leaf-twist-front-wrap-back.jpg",
+    "category": "women",
+    "slot": "dress",
+    "tags": []
+  },
+  {
+    "id": "white-garden-flutter-sleeve-maxi",
+    "name": "White Garden Print Flutter Maxi",
+    "price": "Ask Carolyne",
+    "desc": "White maxi with a botanical garden print, short flutter sleeves and V-neckline — airy and fresh.",
+    "image": "images/women/dresses/white-garden-flutter-sleeve-maxi.jpg",
+    "imageBack": "images/women/dresses/white-garden-flutter-sleeve-maxi-back.jpg",
+    "category": "women",
+    "slot": "dress",
+    "tags": [
+      "new"
+    ]
+  },
+  {
+    "id": "fuchsia-tiered-ruffle-smocked-maxi",
+    "name": "Fuchsia Tiered Ruffle Smocked Maxi",
+    "price": "Ask Carolyne",
+    "desc": "Vibrant fuchsia maxi with tiered ruffle skirt, spaghetti straps and a smocked back bodice.",
+    "image": "images/women/dresses/fuchsia-tiered-ruffle-smocked-maxi.jpg",
+    "imageBack": "images/women/dresses/fuchsia-tiered-ruffle-smocked-maxi-back.jpg",
+    "category": "women",
+    "slot": "dress",
+    "tags": []
+  },
+  {
+    "id": "ivory-botanical-flutter-knee",
+    "name": "Ivory Botanical Flutter Knee Dress",
+    "price": "Ask Carolyne",
+    "desc": "Ivory cream botanical sketch print knee dress with flutter sleeves and an elastic waist.",
+    "image": "images/women/dresses/ivory-botanical-flutter-knee.jpg",
+    "imageBack": "images/women/dresses/ivory-botanical-flutter-knee-back.jpg",
+    "category": "women",
+    "slot": "dress",
+    "tags": []
+  },
+  {
+    "id": "cobalt-blue-sweetheart-mermaid-gown",
+    "name": "Cobalt Blue Sweetheart Mermaid Gown",
+    "price": "Ask Carolyne",
+    "desc": "Cobalt blue strapless sweetheart mermaid gown with ruched bodice and gold-embellished waistband — stunning for formal occasions.",
+    "image": "images/women/dresses/cobalt-blue-sweetheart-mermaid-gown.jpg",
+    "imageBack": "images/women/dresses/cobalt-blue-sweetheart-mermaid-gown-back.jpg",
+    "category": "women",
+    "slot": "dress",
+    "tags": [
+      "premium"
+    ]
+  },
+  {
+    "id": "sage-green-spaghetti-slit-maxi",
+    "name": "Sage Green Spaghetti Strap Maxi",
+    "price": "Ask Carolyne",
+    "desc": "Sage mint green floor-length maxi with V-neck spaghetti straps and a side slit.",
+    "image": "images/women/dresses/sage-green-spaghetti-slit-maxi.jpg",
+    "imageBack": "images/women/dresses/sage-green-spaghetti-slit-maxi-back.jpg",
+    "category": "women",
+    "slot": "dress",
+    "tags": [
+      "trending"
+    ]
+  },
+  {
+    "id": "black-white-polka-dot-skater-midi",
+    "name": "Black & White Polka Dot Skater Midi",
+    "price": "Ask Carolyne",
+    "desc": "Black and white polka dot V-neck skater midi with elastic waist and a botanical border hem.",
+    "image": "images/women/dresses/black-white-polka-dot-skater-midi.jpg",
+    "imageBack": "images/women/dresses/black-white-polka-dot-skater-midi-back.jpg",
+    "category": "women",
+    "slot": "dress",
+    "tags": []
+  },
+  {
+    "id": "blue-navy-hibiscus-smocked-tiered-midi",
+    "name": "Blue Hibiscus Smocked Tiered Midi",
+    "price": "Ask Carolyne",
+    "desc": "Light blue midi with navy hibiscus floral print, smocked waist, ruffle cap sleeves and tiered skirt.",
+    "image": "images/women/dresses/blue-navy-hibiscus-smocked-tiered-midi.jpg",
+    "imageBack": "images/women/dresses/blue-navy-hibiscus-smocked-tiered-midi-back.jpg",
+    "category": "women",
+    "slot": "dress",
+    "tags": [
+      "new"
+    ]
+  },
+  {
+    "id": "mint-green-halter-knotted-midi",
+    "name": "Mint Green Halter Knot Midi",
+    "price": "Ask Carolyne",
+    "desc": "Bright mint green halter midi with a knotted neckline and open crossback — light and flowy.",
+    "image": "images/women/dresses/mint-green-halter-knotted-midi.jpg",
+    "imageBack": "images/women/dresses/mint-green-halter-knotted-midi-back.jpg",
+    "category": "women",
+    "slot": "dress",
+    "tags": []
+  },
+  {
+    "id": "teal-medallion-boho-tiered-knee",
+    "name": "Teal Medallion Boho Knee Dress",
+    "price": "Ask Carolyne",
+    "desc": "Teal turquoise boho knee dress with medallion/mandala print, 3/4 tie sleeves, tiered skirt and ornate border hem.",
+    "image": "images/women/dresses/teal-medallion-boho-tiered-knee.jpg",
+    "imageBack": "images/women/dresses/teal-medallion-boho-tiered-knee-back.jpg",
+    "category": "women",
+    "slot": "dress",
+    "tags": []
+  },
+  {
+    "id": "grey-gold-batik-ruffle-sleeve-midi",
+    "name": "Grey & Gold Batik Ruffle-Sleeve Midi",
+    "price": "Ask Carolyne",
+    "desc": "Silver grey midi with amber gold batik floral print and distinctive ruffle cap sleeves with an elastic waist.",
+    "image": "images/women/dresses/grey-gold-batik-ruffle-sleeve-midi.jpg",
+    "imageBack": "images/women/dresses/grey-gold-batik-ruffle-sleeve-midi-back.jpg",
+    "category": "women",
+    "slot": "dress",
+    "tags": []
+  },
+  {
+    "id": "black-shibori-sunburst-tiered-midi",
+    "name": "Black Shibori Sunburst Midi",
+    "price": "Ask Carolyne",
+    "desc": "Black chiffon tiered midi with a white shibori-style sunburst tie-dye pattern and ruffle off-shoulder neckline.",
+    "image": "images/women/dresses/black-shibori-sunburst-tiered-midi.jpg",
+    "imageBack": "images/women/dresses/black-shibori-sunburst-tiered-midi-back.jpg",
+    "category": "women",
+    "slot": "dress",
+    "tags": [
+      "new"
+    ]
+  },
+  {
+    "id": "black-white-hibiscus-keyhole-mini",
+    "name": "Black & White Hibiscus Keyhole Mini",
+    "price": "Ask Carolyne",
+    "desc": "Bold sleeveless mini with a black bodice, keyhole neckline and white skirt with large black hibiscus print.",
+    "image": "images/women/dresses/black-white-hibiscus-keyhole-mini.jpg",
+    "imageBack": "images/women/dresses/black-white-hibiscus-keyhole-mini-back.jpg",
+    "category": "women",
+    "slot": "dress",
+    "tags": []
+  },
+  {
+    "id": "multicolor-retro-daisy-shift-mini",
+    "name": "Multicolor Retro Daisy Mini",
+    "price": "Ask Carolyne",
+    "desc": "70s-inspired bold daisy and sunflower print shift mini in yellow, green, pink and blue — retro and fun.",
+    "image": "images/women/dresses/multicolor-retro-daisy-shift-mini.jpg",
+    "imageBack": "images/women/dresses/multicolor-retro-daisy-shift-mini-back.jpg",
+    "category": "women",
+    "slot": "dress",
+    "tags": [
+      "new"
+    ]
+  },
+  {
+    "id": "slate-blue-ruched-shirt-dress-midi",
+    "name": "Slate Blue Ruched Shirt Dress",
+    "price": "Ask Carolyne",
+    "desc": "Slate blue button-front long-sleeve shirt dress with a ruched body-hugging midi silhouette and back sash tie.",
+    "image": "images/women/dresses/slate-blue-ruched-shirt-dress-midi.jpg",
+    "imageBack": "images/women/dresses/slate-blue-ruched-shirt-dress-midi-back.jpg",
+    "category": "women",
+    "slot": "dress",
+    "tags": [
+      "trending"
+    ]
+  },
+  {
+    "id": "royal-blue-halter-open-back-maxi",
+    "name": "Royal Blue Halter Open-Back Maxi",
+    "price": "Ask Carolyne",
+    "desc": "Solid royal blue floor-length halter maxi with a V-neck front and a dramatic open crossback.",
+    "image": "images/women/dresses/royal-blue-halter-open-back-maxi.jpg",
+    "imageBack": "images/women/dresses/royal-blue-halter-open-back-maxi-back.jpg",
+    "category": "women",
+    "slot": "dress",
+    "tags": []
+  },
+  {
+    "id": "black-stripe-pink-ombre-graphic-maxi",
+    "name": "Black Stripe Pink Ombré Graphic Maxi",
+    "price": "Ask Carolyne",
+    "desc": "Striking white and black pinstripe long-sleeve button-front maxi with pink fuchsia ombré hem and sleeves, plus an abstract graphic art print on the front.",
+    "image": "images/women/dresses/black-stripe-pink-ombre-graphic-maxi.jpg",
+    "imageBack": "images/women/dresses/black-stripe-pink-ombre-graphic-maxi-back.jpg",
+    "category": "women",
+    "slot": "dress",
+    "tags": [
+      "new",
+      "premium"
+    ]
+  },
+  {
+    "id": "white-floral-halter-keyhole-bodycon-midi",
+    "name": "White Floral Halter Keyhole Bodycon Midi",
+    "price": "Ask Carolyne",
+    "desc": "White bodycon pencil midi with pink, blue and lavender garden floral print, halter keyhole neckline and ruched waist.",
+    "image": "images/women/dresses/white-floral-halter-keyhole-bodycon-midi.jpg",
+    "category": "women",
+    "slot": "dress",
+    "tags": [
+      "new"
+    ]
+  },
+  {
+    "id": "navy-blue-shirt",
+    "name": "Navy Blue Casual Shirt",
+    "price": "Ask Carolyne",
+    "desc": "Solid navy-blue long-sleeve shirt with a chest pocket. MRO Casuals.",
+    "image": "images/men/shirts/navy-blue-shirt-mro-casuals.jpg",
+    "category": "men",
+    "slot": "top",
+    "tags": []
+  },
+  {
+    "id": "blue-grey-pinstripe-shirt",
+    "name": "Blue-Grey Pinstripe Shirt",
+    "price": "Ask Carolyne",
+    "desc": "Light blue-grey pinstripe long-sleeve shirt. Via Europa.",
+    "image": "images/men/shirts/blue-grey-pinstripe-shirt-via-europa.jpg",
+    "category": "men",
+    "slot": "top",
+    "tags": []
+  },
+  {
+    "id": "red-pink-striped-shirt",
+    "name": "Red & Pink Striped Shirt",
+    "price": "Ask Carolyne",
+    "desc": "Bold red, pink and grey striped long-sleeve shirt with chest pocket.",
+    "image": "images/men/shirts/red-pink-striped-shirt.jpg",
+    "category": "men",
+    "slot": "top",
+    "tags": []
+  },
+  {
+    "id": "teal-pattern-shirt",
+    "name": "Teal Pattern Shirt",
+    "price": "Ask Carolyne",
+    "desc": "Teal and green small-pattern long-sleeve shirt with chest pocket.",
+    "image": "images/men/shirts/teal-green-pattern-shirt.jpg",
+    "category": "men",
+    "slot": "top",
+    "tags": []
+  },
+  {
+    "id": "lavender-dress-shirt",
+    "name": "Lavender Dress Shirt",
+    "price": "Ask Carolyne",
+    "desc": "Solid lavender long-sleeve dress shirt. Awearness Kenneth Cole — new with tags.",
+    "image": "images/men/shirts/lavender-dress-shirt-kenneth-cole.jpg",
+    "category": "men",
+    "slot": "top",
+    "tags": []
+  },
+  {
+    "id": "navy-polka-dot-shirt",
+    "name": "Navy Polka Dot Shirt",
+    "price": "Ask Carolyne",
+    "desc": "Navy long-sleeve shirt with a small white polka-dot pattern. Express — new with tags.",
+    "image": "images/men/shirts/navy-polka-dot-shirt-express.jpg",
+    "category": "men",
+    "slot": "top",
+    "tags": []
+  },
+  {
+    "id": "floral-print-shirt",
+    "name": "Floral Print Shirt",
+    "price": "Ask Carolyne",
+    "desc": "White long-sleeve shirt with a blue floral print.",
+    "image": "images/men/shirts/floral-print-shirt.jpg",
+    "category": "men",
+    "slot": "top",
+    "tags": []
+  },
+  {
+    "id": "light-blue-shirt",
+    "name": "Light Blue Shirt",
+    "price": "Ask Carolyne",
+    "desc": "Solid light blue long-sleeve shirt with chest pocket. Kenneth Roberts.",
+    "image": "images/men/shirts/kenneth-roberts-blue-shirt.jpg",
+    "category": "men",
+    "slot": "top",
+    "tags": []
+  },
+  {
+    "id": "black-diamond-shirt",
+    "name": "Black Diamond Pattern Shirt",
+    "price": "Ask Carolyne",
+    "desc": "Black long-sleeve shirt with a white diamond pattern. Express.",
+    "image": "images/men/shirts/express-black-diamond-shirt.jpg",
+    "category": "men",
+    "slot": "top",
+    "tags": []
+  },
+  {
+    "id": "grey-pinstripe-shirt",
+    "name": "Grey Pinstripe Shirt",
+    "price": "Ask Carolyne",
+    "desc": "Grey-brown thin pinstripe long-sleeve shirt with chest pocket.",
+    "image": "images/men/shirts/grey-pinstripe-pocket-shirt.jpg",
+    "category": "men",
+    "slot": "top",
+    "tags": []
+  },
+  {
+    "id": "dockers-blue-shirt",
+    "name": "Dockers Blue Shirt",
+    "price": "Ask Carolyne",
+    "desc": "Solid medium-blue long-sleeve shirt with chest pocket. Dockers.",
+    "image": "images/men/shirts/dockers-blue-shirt.jpg",
+    "category": "men",
+    "slot": "top",
+    "tags": []
+  },
+  {
+    "id": "purple-shirt",
+    "name": "Purple Shirt",
+    "price": "Ask Carolyne",
+    "desc": "Solid purple long-sleeve shirt with chest pocket.",
+    "image": "images/men/shirts/purple-pocket-shirt.jpg",
+    "category": "men",
+    "slot": "top",
+    "tags": []
+  },
+  {
+    "id": "orange-shirt",
+    "name": "Orange Shirt",
+    "price": "Ask Carolyne",
+    "desc": "Solid orange long-sleeve shirt with chest pocket.",
+    "image": "images/men/shirts/orange-shirt.jpg",
+    "category": "men",
+    "slot": "top",
+    "tags": []
+  },
+  {
+    "id": "bright-blue-shirt",
+    "name": "Bright Blue Shirt",
+    "price": "Ask Carolyne",
+    "desc": "Solid bright blue long-sleeve shirt with chest pocket. Burton.",
+    "image": "images/men/shirts/burton-blue-shirt.jpg",
+    "category": "men",
+    "slot": "top",
+    "tags": []
+  },
+  {
+    "id": "cream-shirt",
+    "name": "Cream Shirt",
+    "price": "Ask Carolyne",
+    "desc": "Solid cream long-sleeve shirt with chest pocket. Arrow.",
+    "image": "images/men/shirts/arrow-cream-shirt.jpg",
+    "category": "men",
+    "slot": "top",
+    "tags": []
+  },
+  {
+    "id": "plum-shirt",
+    "name": "Plum Shirt",
+    "price": "Ask Carolyne",
+    "desc": "Solid deep plum long-sleeve shirt. Perry Ellis Portfolio.",
+    "image": "images/men/shirts/perry-ellis-plum-shirt.jpg",
+    "category": "men",
+    "slot": "top",
+    "tags": []
+  },
+  {
+    "id": "navy-multistripe-shirt",
+    "name": "Navy Multi-Stripe Shirt",
+    "price": "Ask Carolyne",
+    "desc": "Navy, blue and brown striped long-sleeve shirt. I.N.C.",
+    "image": "images/men/shirts/inc-striped-shirt.jpg",
+    "category": "men",
+    "slot": "top",
+    "tags": []
+  },
+  {
+    "id": "red-shirt",
+    "name": "Red Shirt",
+    "price": "Ask Carolyne",
+    "desc": "Solid red long-sleeve shirt with chest pocket. Arrow.",
+    "image": "images/men/shirts/arrow-red-shirt.jpg",
+    "category": "men",
+    "slot": "top",
+    "tags": []
+  },
+  {
+    "id": "olive-shirt",
+    "name": "Olive Shirt",
+    "price": "Ask Carolyne",
+    "desc": "Solid olive-green long-sleeve shirt with chest pocket. Express.",
+    "image": "images/men/shirts/express-olive-shirt.jpg",
+    "category": "men",
+    "slot": "top",
+    "tags": []
+  },
+  {
+    "id": "dark-navy-shirt",
+    "name": "Dark Navy Shirt",
+    "price": "Ask Carolyne",
+    "desc": "Solid dark navy long-sleeve shirt with chest pocket. Croft & Barrow.",
+    "image": "images/men/shirts/croft-barrow-navy-shirt.jpg",
+    "category": "men",
+    "slot": "top",
+    "tags": []
+  },
+  {
+    "id": "pink-shirt",
+    "name": "Pink Shirt",
+    "price": "Ask Carolyne",
+    "desc": "Solid pink long-sleeve shirt with chest pocket. Lands' End.",
+    "image": "images/men/shirts/lands-end-pink-shirt.jpg",
+    "category": "men",
+    "slot": "top",
+    "tags": []
+  },
+  {
+    "id": "navy-slim-shirt",
+    "name": "Navy Slim Shirt",
+    "price": "Ask Carolyne",
+    "desc": "Solid navy long-sleeve shirt, slim fit. H&M.",
+    "image": "images/men/shirts/navy-slim-shirt.jpg",
+    "category": "men",
+    "slot": "top",
+    "tags": []
+  },
+  {
+    "id": "charcoal-grey-shirt",
+    "name": "Charcoal Grey Shirt",
+    "price": "Ask Carolyne",
+    "desc": "Solid charcoal grey long-sleeve shirt with chest pocket.",
+    "image": "images/men/shirts/charcoal-grey-shirt.jpg",
+    "category": "men",
+    "slot": "top",
+    "tags": []
+  },
+  {
+    "id": "maroon-shirt",
+    "name": "Maroon Shirt",
+    "price": "Ask Carolyne",
+    "desc": "Solid maroon long-sleeve shirt with chest pocket. Sonoma.",
+    "image": "images/men/shirts/maroon-shirt.jpg",
+    "category": "men",
+    "slot": "top",
+    "tags": []
+  },
+  {
+    "id": "black-slim-fit-shirt",
+    "name": "Black Slim Fit Shirt",
+    "price": "Ask Carolyne",
+    "desc": "Solid black long-sleeve shirt, slim fit. Paisley & Gray.",
+    "image": "images/men/shirts/black-slim-fit-shirt.jpg",
+    "category": "men",
+    "slot": "top",
+    "tags": []
+  },
+  {
+    "id": "black-piping-shirt",
+    "name": "Black Shirt with White Piping",
+    "price": "Ask Carolyne",
+    "desc": "Solid black long-sleeve shirt with a white piping accent down the front placket.",
+    "image": "images/men/shirts/black-piping-shirt.jpg",
+    "category": "men",
+    "slot": "top",
+    "tags": []
+  },
+  {
+    "id": "black-pocket-shirt",
+    "name": "Black Shirt with Pocket",
+    "price": "Ask Carolyne",
+    "desc": "Solid black long-sleeve shirt with chest pocket. Croft & Barrow.",
+    "image": "images/men/shirts/black-pocket-shirt.jpg",
+    "category": "men",
+    "slot": "top",
+    "tags": []
+  },
+  {
+    "id": "tan-short-sleeve-shirt",
+    "name": "Tan Short-Sleeve Shirt",
+    "price": "Ask Carolyne",
+    "desc": "Solid tan short-sleeve shirt with chest pocket. Stafford.",
+    "image": "images/men/shirts/tan-short-sleeve-shirt.jpg",
+    "category": "men",
+    "slot": "top",
+    "tags": []
+  },
+  {
+    "id": "navy-short-sleeve-shirt",
+    "name": "Navy Short-Sleeve Shirt",
+    "price": "Ask Carolyne",
+    "desc": "Solid navy short-sleeve shirt with chest pocket.",
+    "image": "images/men/shirts/navy-short-sleeve-shirt.jpg",
+    "category": "men",
+    "slot": "top",
+    "tags": []
+  },
+  {
+    "id": "pink-short-sleeve-shirt",
+    "name": "Pink Short-Sleeve Shirt",
+    "price": "Ask Carolyne",
+    "desc": "Solid pink short-sleeve shirt with button-down collar and chest pocket. Editions.",
+    "image": "images/men/shirts/pink-short-sleeve-shirt.jpg",
+    "category": "men",
+    "slot": "top",
+    "tags": []
+  },
+  {
+    "id": "navy-pattern-long-sleeve-shirt",
+    "name": "Navy Pattern Shirt",
+    "price": "Ask Carolyne",
+    "desc": "Navy long-sleeve shirt with a small all-over pattern. Vogartino — new with tags.",
+    "image": "images/men/shirts/navy-pattern-long-sleeve-shirt.jpg",
+    "category": "men",
+    "slot": "top",
+    "tags": [
+      "new"
+    ]
+  },
+  {
+    "id": "navy-pattern-short-sleeve-shirt",
+    "name": "Navy Pattern Short-Sleeve Shirt",
+    "price": "Ask Carolyne",
+    "desc": "Navy short-sleeve shirt with a small white pattern.",
+    "image": "images/men/shirts/navy-pattern-short-sleeve-shirt.jpg",
+    "category": "men",
+    "slot": "top",
+    "tags": []
+  },
+  {
+    "id": "black-tropical-print-shirt",
+    "name": "Black Tropical Print Shirt",
+    "price": "Ask Carolyne",
+    "desc": "Black short-sleeve shirt with a grey and teal tropical leaf print.",
+    "image": "images/men/shirts/black-tropical-print-shirt.jpg",
+    "category": "men",
+    "slot": "top",
+    "tags": []
+  },
+  {
+    "id": "flamingo-print-shirt",
+    "name": "Flamingo Print Shirt",
+    "price": "Ask Carolyne",
+    "desc": "White short-sleeve shirt with a pink flamingo print. Old Navy — new with tags.",
+    "image": "images/men/shirts/flamingo-print-shirt.jpg",
+    "category": "men",
+    "slot": "top",
+    "tags": [
+      "new"
+    ]
+  },
+  {
+    "id": "peach-tropical-print-shirt",
+    "name": "Peach Tropical Print Shirt",
+    "price": "Ask Carolyne",
+    "desc": "Peach short-sleeve shirt with a green and blue tropical floral print.",
+    "image": "images/men/shirts/peach-tropical-print-shirt.jpg",
+    "category": "men",
+    "slot": "top",
+    "tags": []
+  },
+  {
+    "id": "sailboat-print-shirt",
+    "name": "Sailboat Print Shirt",
+    "price": "Ask Carolyne",
+    "desc": "Cream short-sleeve shirt with a sailboat print and chest pocket. Flag & Anthem.",
+    "image": "images/men/shirts/sailboat-print-shirt.jpg",
+    "category": "men",
+    "slot": "top",
+    "tags": []
+  },
+  {
+    "id": "blue-tropical-floral-shirt",
+    "name": "Blue Tropical Floral Shirt",
+    "price": "Ask Carolyne",
+    "desc": "White short-sleeve shirt with a blue and teal tropical floral print.",
+    "image": "images/men/shirts/blue-tropical-floral-shirt.jpg",
+    "category": "men",
+    "slot": "top",
+    "tags": []
+  },
+  {
+    "id": "light-blue-short-sleeve-shirt",
+    "name": "Light Blue Short-Sleeve Shirt",
+    "price": "Ask Carolyne",
+    "desc": "Solid light blue short-sleeve shirt with patterned trim.",
+    "image": "images/men/shirts/light-blue-short-sleeve-shirt.jpg",
+    "category": "men",
+    "slot": "top",
+    "tags": []
+  },
+  {
+    "id": "shark-print-shirt",
+    "name": "Shark Print Shirt",
+    "price": "Ask Carolyne",
+    "desc": "Bright blue short-sleeve shirt with a cartoon shark print.",
+    "image": "images/men/shirts/shark-print-shirt.jpg",
+    "category": "men",
+    "slot": "top",
+    "tags": []
+  },
+  {
+    "id": "novelty-print-shirt",
+    "name": "Novelty Print Shirt",
+    "price": "Ask Carolyne",
+    "desc": "White short-sleeve shirt with a quirky character print. Super Massive.",
+    "image": "images/men/shirts/novelty-print-shirt.jpg",
+    "category": "men",
+    "slot": "top",
+    "tags": []
+  },
+  {
+    "id": "palm-tree-print-shirt",
+    "name": "Palm Tree Print Shirt",
+    "price": "Ask Carolyne",
+    "desc": "Light blue short-sleeve shirt with a white palm tree and fish print. Croft & Barrow — new with tags.",
+    "image": "images/men/shirts/palm-tree-print-shirt.jpg",
+    "category": "men",
+    "slot": "top",
+    "tags": [
+      "new"
+    ]
+  },
+  {
+    "id": "girls-party-dress",
+    "name": "Girls' Party Dress",
+    "price": "KES 1,200 – 2,200",
+    "desc": "Adorable party dress for girls aged 2–10, available in various colors.",
+    "image": "images/kids/dress-kids.jpg",
+    "category": "kids",
+    "slot": "dress",
+    "tags": [
+      "new",
+      "premium"
+    ]
+  },
+  {
+    "id": "boys-shirt-shorts-set",
+    "name": "Boys' Shirt & Shorts Set",
+    "price": "KES 1,000 – 1,800",
+    "desc": "Matching shirt and shorts set for boys, comfortable for play and outings.",
+    "image": "images/kids/set-boys.jpg",
+    "category": "kids",
+    "slot": "set",
+    "tags": [
+      "trending"
+    ]
+  },
+  {
+    "id": "baby-romper",
+    "name": "Baby Romper",
+    "price": "KES 700 – 1,200",
+    "desc": "Soft cotton romper for babies, easy to wear, sizes 0–18 months.",
+    "image": "images/kids/romper-baby.jpg",
+    "category": "kids",
+    "slot": "set",
+    "tags": []
+  },
+  {
+    "id": "kids-casual-set",
+    "name": "Kids' Casual Set",
+    "price": "KES 900 – 1,600",
+    "desc": "Everyday casual wear set for kids, durable and comfortable.",
+    "image": "images/kids/school-set.jpg",
+    "category": "kids",
+    "slot": "set",
+    "tags": [
+      "premium"
+    ]
+  }
+]

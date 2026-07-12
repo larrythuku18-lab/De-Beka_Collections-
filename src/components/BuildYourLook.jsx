@@ -13,6 +13,7 @@ export default function BuildYourLook() {
   const slots = useMemo(() => {
     const bySlot = {};
     PRODUCTS.forEach((p) => {
+      if (p.sold) return;
       if (!bySlot[p.slot]) bySlot[p.slot] = [];
       bySlot[p.slot].push(p);
     });
