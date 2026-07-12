@@ -965,6 +965,8 @@ button {
 .footer-signup p { font-size: 0.85rem; color: #999; }
 
 .footer-bottom { text-align: center; padding-top: 20px; border-top: 1px solid #333; font-size: 0.85rem; }
+.footer-admin-link { display: inline-block; margin-top: 8px; color: var(--muted-text); font-size: 0.78rem; text-decoration: none; opacity: 0.7; }
+.footer-admin-link:hover { opacity: 1; text-decoration: underline; }
 
 /* Mobile */
 @media (max-width: 768px) {

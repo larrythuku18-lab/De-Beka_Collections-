@@ -28,6 +28,7 @@ export default function Footer() {
       </div>
       <div className="container footer-bottom">
         <p>&copy; {new Date().getFullYear()} De'Beka Collections — Carolyne Wanyonyi. All rights reserved.</p>
+        <a className="footer-admin-link" href="#/admin">Shop admin</a>
       </div>
     </footer>
   );
