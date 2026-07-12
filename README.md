@@ -40,7 +40,7 @@ There's also a `netlify.toml` left in the repo from a previous attempt at hostin
 
 How it works: there is no server or database. "Publish to website" makes one git commit to this repo via the GitHub API (new photos + updated `src/data/products.json`), and Vercel auto-deploys it — changes go live in about a minute.
 
-Setup (one-time, Larry): create a **fine-grained personal access token** on GitHub scoped to only this repo with **Contents: Read and write** (nothing else), and paste it into the admin login on Carolyne's phone. It's stored in that browser's localStorage only — never committed. If the token ever leaks, revoke it at github.com → Settings → Developer settings; the blast radius is this one repo. Instructions are also shown on the admin login screen itself.
+Setup (one-time, Larry): create a **fine-grained personal access token** on GitHub scoped to only this repo with **Contents: Read and write** (nothing else), and paste it into the admin login on Carolyne's phone. It's stored in that browser's localStorage only — never committed. If the token ever leaks, revoke it at github.com → Settings → Developer settings; the blast radius is this one repo.
 
 Notes:
 - Edits are staged on the page until **Publish** — one commit per publish session, message lists every change.

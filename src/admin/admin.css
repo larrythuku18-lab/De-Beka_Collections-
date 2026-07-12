@@ -40,17 +40,6 @@
   max-width: 340px;
 }
 
-.admin-help {
-  margin: 28px auto 0;
-  max-width: 420px;
-  text-align: left;
-  font-size: 0.88rem;
-  color: #55504a;
-}
-
-.admin-help summary { cursor: pointer; font-weight: 600; }
-.admin-help ol { margin: 10px 0 0 18px; display: grid; gap: 6px; }
-
 .admin-back-link {
   display: inline-block;
   margin-top: 32px;

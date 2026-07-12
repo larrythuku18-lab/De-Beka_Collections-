@@ -257,15 +257,6 @@ export default function AdminApp() {
           <button type="submit" className="admin-btn admin-btn--primary">Unlock</button>
         </form>
         {loginError && <p className="admin-error">{loginError}</p>}
-        <details className="admin-help">
-          <summary>How to create the access key (for Larry)</summary>
-          <ol>
-            <li>Go to <strong>github.com → Settings → Developer settings → Personal access tokens → Fine-grained tokens → Generate new token</strong>.</li>
-            <li>Repository access: <strong>Only select repositories</strong> → pick <strong>De-Beka_Collections-</strong>.</li>
-            <li>Permissions → Repository permissions → <strong>Contents: Read and write</strong>. Nothing else.</li>
-            <li>Set the longest expiry available, generate, and paste the token here on Carolyne's phone. It is saved on this device only.</li>
-          </ol>
-        </details>
         <a className="admin-back-link" href="#/" onClick={() => window.scrollTo(0, 0)}>← Back to the shop</a>
       </div>
     );
