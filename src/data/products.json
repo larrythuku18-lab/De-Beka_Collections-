@@ -960,7 +960,8 @@
     "image": "images/men/shirts/shark-print-shirt.jpg",
     "category": "men",
     "slot": "top",
-    "tags": []
+    "tags": [],
+    "sold": true
   },
   {
     "id": "novelty-print-shirt",
