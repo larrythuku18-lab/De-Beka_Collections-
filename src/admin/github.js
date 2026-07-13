@@ -37,8 +37,16 @@ async function gh(token, path, options = {}) {
 
 export async function validateToken(token) {
   const repo = await gh(token, '');
-  if (!repo.permissions?.push) {
-    throw new Error('This token can read the repo but cannot write to it. It needs "Contents: Read and write" permission.');
+  // repo.permissions reflects the user's role, not the token's grants, so
+  // actually exercise write access: create a tiny orphan blob (never
+  // referenced by any commit — invisible and garbage-collected by GitHub).
+  try {
+    await gh(token, '/git/blobs', {
+      method: 'POST',
+      body: JSON.stringify({ content: 'debeka-admin-write-check', encoding: 'utf-8' }),
+    });
+  } catch {
+    throw new Error('This access key can view the catalog but cannot publish changes. Recreate it on GitHub with Repository access "Only select repositories" → De-Beka_Collections-, and permission "Contents: Read and write".');
   }
   return repo;
 }
