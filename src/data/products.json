@@ -995,7 +995,8 @@
     "tags": [
       "new",
       "premium"
-    ]
+    ],
+    "sold": true
   },
   {
     "id": "boys-shirt-shorts-set",
@@ -1007,7 +1008,8 @@
     "slot": "set",
     "tags": [
       "trending"
-    ]
+    ],
+    "sold": true
   },
   {
     "id": "baby-romper",
@@ -1017,7 +1019,8 @@
     "image": "images/kids/romper-baby.jpg",
     "category": "kids",
     "slot": "set",
-    "tags": []
+    "tags": [],
+    "sold": true
   },
   {
     "id": "kids-casual-set",
@@ -1029,6 +1032,7 @@
     "slot": "set",
     "tags": [
       "premium"
-    ]
+    ],
+    "sold": true
   }
 ]
