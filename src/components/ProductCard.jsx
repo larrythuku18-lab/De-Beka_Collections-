@@ -31,6 +31,7 @@ export default function ProductCard({ product }) {
   return (
     <motion.div
       className="product-card"
+      data-line={product.category}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       style={{ rotateX: springX, rotateY: springY, transformPerspective: 800 }}
@@ -59,7 +60,7 @@ export default function ProductCard({ product }) {
         )}
       </div>
       <div className="product-info">
-        <p className="eyebrow">{CATEGORY_LABELS[product.category]}</p>
+        <p className="eyebrow"><span className="eyebrow-line" data-line={product.category}>{CATEGORY_LABELS[product.category]}</span></p>
         <h3>{product.name}</h3>
         <p className="price">{product.price}</p>
         <p className="desc">{product.desc}</p>

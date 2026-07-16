@@ -42,7 +42,7 @@ export default function ShopGrid() {
             <div className="filter-pills">
               <button className={`filter-pill ${activeFilter === 'all' ? 'active' : ''}`} onClick={() => setActiveFilter('all')}>All Pieces</button>
               {Object.entries(CATEGORY_LABELS).map(([key, label]) => (
-                <button key={key} className={`filter-pill ${activeFilter === key ? 'active' : ''}`} onClick={() => setActiveFilter(key)}>
+                <button key={key} className={`filter-pill ${activeFilter === key ? 'active' : ''}`} data-line={key} onClick={() => setActiveFilter(key)}>
                   {label}
                 </button>
               ))}

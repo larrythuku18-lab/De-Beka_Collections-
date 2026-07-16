@@ -2,9 +2,9 @@ import { motion } from 'framer-motion';
 import { useApp } from '../context/AppContext.jsx';
 
 const TILES = [
-  { filter: 'women', label: 'Women', image: 'images/women/dress-ankara.jpg' },
-  { filter: 'men', label: "Men & Unisex", image: 'images/men/jacket-bomber.jpg' },
-  { filter: 'kids', label: 'Kids', image: 'images/kids/dress-kids.jpg' },
+  { filter: 'women', label: 'Women', image: 'images/women/dress-ankara.jpg', line: 'women' },
+  { filter: 'men', label: "Men & Unisex", image: 'images/men/jacket-bomber.jpg', line: 'men' },
+  { filter: 'kids', label: 'Kids', image: 'images/kids/dress-kids.jpg', line: 'kids' },
 ];
 
 export default function CategoryTiles() {
@@ -32,6 +32,7 @@ export default function CategoryTiles() {
             <motion.button
               key={tile.filter}
               className="category-tile"
+              data-line={tile.line}
               onClick={() => goTo(tile.filter)}
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}

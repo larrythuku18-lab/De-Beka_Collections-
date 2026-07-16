@@ -31,10 +31,10 @@ export default function EditorialRow({ id, title, products, badge }) {
           </div>
         </div>
         <div className="carousel" ref={trackRef}>
-          {products.map((product) => (
-            <motion.div
+          {products.map((product) => (              <motion.div
               key={product.id}
               className="carousel-card"
+              data-line={product.category}
               onClick={() => openQuickView(product)}
               whileHover={{ y: -6 }}
               initial={{ opacity: 0, y: 20 }}

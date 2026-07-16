@@ -47,7 +47,8 @@ export default function Navbar() {
               aria-label="Search products"
             />
           </div>
-          <a href="#home" onClick={() => setMobileOpen(false)}>Home</a>
+          <a href="#vibe-hero" onClick={() => setMobileOpen(false)}>Home</a>
+          <a href="#line-vibes" onClick={() => setMobileOpen(false)}>Our Vibe</a>
           <div className="nav-dropdown" onMouseEnter={openDropdown} onMouseLeave={closeDropdownDelayed}>
             <a href="#shop" onClick={(e) => { e.preventDefault(); goToCategory('all'); }}>Shop</a>
             {shopDropdownOpen && (
@@ -58,7 +59,7 @@ export default function Navbar() {
                 transition={{ duration: 0.18 }}
               >
                 {Object.entries(CATEGORY_LABELS).map(([key, label]) => (
-                  <button key={key} onClick={() => goToCategory(key)}>{label}</button>
+                  <button key={key} data-line={key} onClick={() => goToCategory(key)}>{label}</button>
                 ))}
               </motion.div>
             )}
@@ -69,7 +70,7 @@ export default function Navbar() {
           <a href="#contact" onClick={() => setMobileOpen(false)}>Contact</a>
         </nav>
 
-        <a href="#home" className="logo logo--centered">
+        <a href="#vibe-hero" className="logo logo--centered">
           <img className="logo-mark" src="images/logo-emblem.jpg" alt="De'Beka Collections" width="36" height="36" />
           <span className="logo-text">De'Beka <em>Collections</em></span>
         </a>

@@ -2,8 +2,9 @@ import { useEffect } from 'react';
 import Lenis from 'lenis';
 import PageLoader from './components/PageLoader.jsx';
 import Navbar from './components/Navbar.jsx';
-import Hero from './components/Hero.jsx';
+import VibeHero from './components/VibeHero.jsx';
 import About from './components/About.jsx';
+import LineVibeSection from './components/LineVibeSection.jsx';
 import CategoryTiles from './components/CategoryTiles.jsx';
 import EditorialRow from './components/EditorialRow.jsx';
 import ShopGrid from './components/ShopGrid.jsx';
@@ -38,8 +39,9 @@ export default function App() {
     <>
       <PageLoader />
       <Navbar />
-      <Hero />
+      <VibeHero />
       <About />
+      <LineVibeSection />
       <CategoryTiles />
       <EditorialRow id="new-arrivals" title="New Arrivals" products={byTag('new')} badge="New" />
       <EditorialRow id="trending-now" title="Trending Now" products={byTag('trending')} />

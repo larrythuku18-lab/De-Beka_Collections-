@@ -15,6 +15,28 @@
   --surface-strong: rgba(255, 255, 255, 0.7);
   --surface-border: rgba(44, 79, 214, 0.18);
   --placeholder-bg: #ece8e0;
+
+  /* ── LineVibe palettes ── */
+
+  /* Women: Art Nouveau — elegant, ornate, fluid, jewel-toned */
+  --line-women: #8a1a5e;
+  --line-women-light: rgba(138, 26, 94, 0.10);
+  --line-women-mid: rgba(138, 26, 94, 0.22);
+  --line-women-glow: rgba(201, 162, 75, 0.25);
+
+  /* Men & Unisex: Geometric Luxury — bold, structured, modern */
+  --line-men: #1a3a5c;
+  --line-men-light: rgba(26, 58, 92, 0.10);
+  --line-men-mid: rgba(26, 58, 92, 0.22);
+  --line-men-accent: #c46a4a;
+  --line-men-glow: rgba(196, 106, 74, 0.20);
+
+  /* Kids: Playful Gaudí — whimsical, colorful, vibrant pastels */
+  --line-kids: #d45a1a;
+  --line-kids-light: rgba(212, 90, 26, 0.10);
+  --line-kids-mid: rgba(212, 90, 26, 0.22);
+  --line-kids-accent: #2ca6e8;
+  --line-kids-glow: rgba(44, 166, 232, 0.25);
 }
 
 [data-theme="dark"] {
@@ -25,6 +47,14 @@
   --surface-strong: rgba(20, 20, 20, 0.6);
   --surface-border: rgba(232, 18, 126, 0.22);
   --placeholder-bg: #1c1a1f;
+
+  /* Dark mode LineVibe tints (punchier on dark background) */
+  --line-women-light: rgba(180, 60, 130, 0.14);
+  --line-women-mid: rgba(180, 60, 130, 0.28);
+  --line-men-light: rgba(50, 100, 160, 0.14);
+  --line-men-mid: rgba(50, 100, 160, 0.28);
+  --line-kids-light: rgba(230, 140, 60, 0.14);
+  --line-kids-mid: rgba(230, 140, 60, 0.28);
 }
 
 * {
@@ -236,8 +266,29 @@ button {
   font-size: 0.9rem;
 }
 
-.dropdown-menu button:hover {
-  background: rgba(232, 18, 126, 0.2);
+.dropdown-menu button[data-line="women"]  { --line-c: var(--line-women); --line-light: var(--line-women-light); }
+.dropdown-menu button[data-line="men"]    { --line-c: var(--line-men);   --line-light: var(--line-men-light); }
+.dropdown-menu button[data-line="kids"]   { --line-c: var(--line-kids);  --line-light: var(--line-kids-light); }
+
+.dropdown-menu button[data-line]:hover {
+  background: var(--line-light);
+}
+
+.dropdown-menu button[data-line]::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--line-c);
+  margin-right: 6px;
+  vertical-align: middle;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.dropdown-menu button[data-line]:hover::before {
+  opacity: 1;
 }
 
 .nav-search input {
@@ -303,6 +354,436 @@ button {
 .theme-toggle:hover {
   transform: scale(1.08);
   background: rgba(255, 255, 255, 0.2);
+}
+
+/* ── VibeHero (auto-rotating LineVibe showcase) ── */
+.vibe-hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--ivory);
+  text-align: center;
+  padding: 140px 20px 80px;
+}
+
+/* Background layers */
+.vibe-hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.vibe-hero-bg-layer {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.vibe-hero-bg-layer.is-active {
+  opacity: 1;
+}
+
+/* Mosaic pattern overlay on vibe slides (not brand slide) */
+.vibe-hero-pattern {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.04;
+  transition: opacity 0.8s ease;
+}
+
+.vibe-hero-pattern.is-active {
+  opacity: 0.06;
+}
+
+/* Women: flowing Art Nouveau curves */
+.vibe-hero-pattern[data-line="women"] {
+  background:
+    repeating-linear-gradient(
+      100deg,
+      transparent 0px,
+      transparent 50px,
+      rgba(255, 255, 255, 0.4) 50px,
+      rgba(255, 255, 255, 0.4) 51px,
+      transparent 51px,
+      transparent 100px
+    ),
+    repeating-linear-gradient(
+      260deg,
+      transparent 0px,
+      transparent 35px,
+      rgba(255, 255, 255, 0.3) 35px,
+      rgba(255, 255, 255, 0.3) 36px,
+      transparent 36px,
+      transparent 70px
+    );
+  mask-image: radial-gradient(ellipse at 50% 30%, black 20%, transparent 70%);
+  -webkit-mask-image: radial-gradient(ellipse at 50% 30%, black 20%, transparent 70%);
+}
+
+/* Men & Unisex: geometric diamonds */
+.vibe-hero-pattern[data-line="men"] {
+  background:
+    repeating-linear-gradient(
+      45deg,
+      transparent 0px,
+      transparent 30px,
+      rgba(255, 255, 255, 0.3) 30px,
+      rgba(255, 255, 255, 0.3) 31px,
+      transparent 31px,
+      transparent 60px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      transparent 0px,
+      transparent 30px,
+      rgba(255, 255, 255, 0.2) 30px,
+      rgba(255, 255, 255, 0.2) 31px,
+      transparent 31px,
+      transparent 60px
+    );
+  mask-image: radial-gradient(ellipse at 50% 30%, black 20%, transparent 70%);
+  -webkit-mask-image: radial-gradient(ellipse at 50% 30%, black 20%, transparent 70%);
+}
+
+/* Kids: playful dots */
+.vibe-hero-pattern[data-line="kids"] {
+  background:
+    radial-gradient(circle at 10% 15%, rgba(255, 255, 255, 0.3) 2px, transparent 2px),
+    radial-gradient(circle at 30% 10%, rgba(255, 255, 255, 0.2) 3px, transparent 3px),
+    radial-gradient(circle at 50% 20%, rgba(255, 255, 255, 0.3) 2px, transparent 2px),
+    radial-gradient(circle at 70% 12%, rgba(255, 255, 255, 0.2) 3px, transparent 3px),
+    radial-gradient(circle at 90% 25%, rgba(255, 255, 255, 0.2) 2px, transparent 2px),
+    radial-gradient(circle at 15% 35%, rgba(255, 255, 255, 0.2) 3px, transparent 3px),
+    radial-gradient(circle at 40% 30%, rgba(255, 255, 255, 0.2) 2px, transparent 2px),
+    radial-gradient(circle at 65% 40%, rgba(255, 255, 255, 0.3) 3px, transparent 3px),
+    radial-gradient(circle at 85% 35%, rgba(255, 255, 255, 0.2) 2px, transparent 2px);
+  mask-image: radial-gradient(ellipse at 50% 30%, black 20%, transparent 70%);
+  -webkit-mask-image: radial-gradient(ellipse at 50% 30%, black 20%, transparent 70%);
+}
+
+@keyframes vibe-hero-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-24px); }
+}
+
+/* Decorative glowing orb */
+.vibe-hero-orb {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.3;
+  top: 5%;
+  right: -10%;
+  z-index: 0;
+  transition: background 0.8s ease, box-shadow 0.8s ease;
+  pointer-events: none;
+}
+
+/* Content wrapper */
+.vibe-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 660px;
+  width: 100%;
+  min-height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vibe-hero-content--brand {
+  max-width: 680px;
+}
+
+.vibe-hero-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Icon */
+.vibe-hero-icon {
+  font-size: 3rem;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  margin-bottom: 16px;
+}
+
+/* Eyebrow */
+.vibe-hero-eyebrow {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-weight: 700;
+  margin-bottom: 6px;
+  opacity: 0.8;
+}
+
+/* Title */
+.vibe-hero-title {
+  font-family: "Playfair Display", serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+  letter-spacing: 0.3px;
+}
+
+/* Tagline pills */
+.vibe-hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.vibe-hero-tag {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.10);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #fff;
+}
+
+/* Swatches */
+.vibe-hero-swatches {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.vibe-hero-swatch {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  cursor: default;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.vibe-hero-swatch:hover {
+  transform: scale(1.2);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Mood text */
+.vibe-hero-mood {
+  font-size: 1rem;
+  line-height: 1.7;
+  opacity: 0.85;
+  max-width: 520px;
+  margin-bottom: 28px;
+  font-style: italic;
+}
+
+/* Brand slide elements */
+.vibe-hero-plaque {
+  width: 180px;
+  height: auto;
+  border-radius: 14px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+  margin-bottom: 10px;
+}
+
+.vibe-hero-tagline {
+  display: flex;
+  gap: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.85rem;
+  color: var(--pink);
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+.vibe-hero-heading {
+  font-family: "Playfair Display", serif;
+  font-size: 2.6rem;
+  margin-bottom: 16px;
+  letter-spacing: 0.3px;
+}
+
+.vibe-hero-sub {
+  font-size: 1.1rem;
+  margin-bottom: 28px;
+  opacity: 0.9;
+}
+
+.vibe-hero-brand-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Unified button style for vibe-hero CTAs */
+.vibe-hero-btn {
+  display: inline-block;
+  background: var(--pink);
+  color: #fff;
+  padding: 13px 30px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+  font-family: inherit;
+}
+
+.vibe-hero-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(217, 79, 134, 0.35);
+}
+
+.vibe-hero-btn--outline {
+  background: transparent;
+  border: 1px solid var(--silver);
+  color: var(--ivory);
+}
+
+.vibe-hero-btn--outline:hover {
+  background: rgba(247, 244, 239, 0.08);
+  box-shadow: none;
+}
+
+/* Decorative orbs for brand slide */
+.vibe-hero-orb--pink {
+  width: 220px;
+  height: 220px;
+  background: var(--pink);
+  top: 10%;
+  left: 8%;
+  box-shadow: none;
+  animation: vibe-hero-float 9s ease-in-out infinite;
+}
+
+.vibe-hero-orb--blue {
+  width: 260px;
+  height: 260px;
+  background: var(--blue);
+  bottom: 5%;
+  right: 8%;
+  box-shadow: none;
+  animation: vibe-hero-float 9s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+/* CTA for vibe slides (secondary style) */
+.vibe-hero-cta {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 13px 30px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  font-family: inherit;
+}
+
+.vibe-hero-cta:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer: progress + dots + pause */
+.vibe-hero-footer {
+  position: absolute;
+  bottom: 36px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  z-index: 1;
+}
+
+.vibe-hero-progress {
+  display: flex;
+  gap: 6px;
+  width: 160px;
+}
+
+.vibe-hero-progress-track {
+  flex: 1;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.vibe-hero-progress-fill {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.05s linear;
+}
+
+.vibe-hero-dots {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.vibe-hero-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+  padding: 0;
+}
+
+.vibe-hero-dot:hover {
+  transform: scale(1.25);
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+.vibe-hero-dot.is-active {
+  border-color: transparent;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.vibe-hero-pause {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.2s ease;
+  padding: 4px;
+}
+
+.vibe-hero-pause:hover {
+  color: rgba(255, 255, 255, 0.8);
+  transform: scale(1.1);
 }
 
 /* Hero */
@@ -424,6 +905,374 @@ button {
   color: #2a1d00;
 }
 
+/* LineVibe Section */
+.line-vibes {
+  padding: 70px 20px;
+  background: var(--surface);
+}
+
+.line-vibe-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.line-vibe-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: var(--bg);
+  border: 1px solid var(--surface-border);
+  border-radius: 16px;
+  padding: 36px 24px 28px;
+  overflow: hidden;
+  transition: box-shadow 0.4s ease, transform 0.3s ease, border-color 0.3s ease;
+}
+
+.line-vibe-card[data-line="women"] { --line-c: var(--line-women); --line-light: var(--line-women-light); --line-mid: var(--line-women-mid); }
+.line-vibe-card[data-line="men"]   { --line-c: var(--line-men);   --line-light: var(--line-men-light);   --line-mid: var(--line-men-mid); }
+.line-vibe-card[data-line="kids"]  { --line-c: var(--line-kids);  --line-light: var(--line-kids-light);  --line-mid: var(--line-kids-mid); }
+
+.line-vibe-card:hover {
+  border-color: var(--line-c);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08), 0 0 40px var(--line-light);
+  transform: translateY(-4px);
+}
+
+/* Top accent bar */
+.line-vibe-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--line-c);
+  border-radius: 16px 16px 0 0;
+}
+
+/* Icon */
+.line-vibe-icon {
+  font-size: 2.4rem;
+  margin-bottom: 12px;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--line-light);
+  color: var(--line-c);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.line-vibe-card:hover .line-vibe-icon {
+  transform: scale(1.08);
+  box-shadow: 0 0 20px var(--line-mid);
+}
+
+/* Name + subtitle */
+.line-vibe-name {
+  font-family: "Playfair Display", serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 2px;
+}
+
+.line-vibe-subtitle {
+  font-size: 0.85rem;
+  color: var(--line-c);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+/* Tagline pills */
+.line-vibe-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.line-vibe-tag {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--line-light);
+  color: var(--line-c);
+  border: 1px solid var(--line-mid);
+}
+
+/* Color swatches */
+.line-vibe-swatches {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.line-vibe-swatch {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid var(--surface-border);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: default;
+}
+
+.line-vibe-card:hover .line-vibe-swatch {
+  transform: scale(1.15);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+}
+
+.line-vibe-card:hover .line-vibe-swatch:nth-child(2) { transition-delay: 0.03s; }
+.line-vibe-card:hover .line-vibe-swatch:nth-child(3) { transition-delay: 0.06s; }
+.line-vibe-card:hover .line-vibe-swatch:nth-child(4) { transition-delay: 0.09s; }
+
+/* Description */
+.line-vibe-learn {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  background: var(--line-light);
+  color: var(--line-c);
+  border: 1px solid var(--line-mid);
+  padding: 10px 22px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.25s ease, color 0.25s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  margin-top: 12px;
+}
+
+.line-vibe-learn:hover {
+  background: var(--line-c);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px var(--line-mid);
+}
+
+.line-vibe-desc {
+  font-size: 0.9rem;
+  color: var(--muted-text);
+  line-height: 1.65;
+  margin-bottom: 14px;
+  max-width: 320px;
+}/* ── Decorative mosaic SVG corners ── */
+.line-vibe-mosaic {
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  color: var(--line-c);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.line-vibe-mosaic--tl {
+  top: 0;
+  left: 0;
+}
+
+.line-vibe-mosaic--br {
+  bottom: 0;
+  right: 0;
+}
+
+.line-vibe-card:hover .line-vibe-mosaic {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* ── Mosaic background patterns ── */
+
+/* Women: Art Nouveau — flowing organic curves like stained glass */
+.line-vibe-card[data-line="women"]::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.06;
+  background:
+    /* S-curve flow lines */
+    repeating-linear-gradient(
+      100deg,
+      transparent 0px,
+      transparent 40px,
+      rgba(201, 162, 75, 0.5) 40px,
+      rgba(201, 162, 75, 0.5) 41px,
+      transparent 41px,
+      transparent 80px
+    ),
+    repeating-linear-gradient(
+      260deg,
+      transparent 0px,
+      transparent 30px,
+      rgba(138, 26, 94, 0.4) 30px,
+      rgba(138, 26, 94, 0.4) 31px,
+      transparent 31px,
+      transparent 60px
+    ),
+    /* Organic radial blobs */
+    radial-gradient(circle at 20% 30%, rgba(201, 162, 75, 0.6) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(107, 47, 160, 0.4) 0%, transparent 40%),
+    /* Wavy horizontal bands */
+    repeating-linear-gradient(
+      0deg,
+      transparent 0px,
+      transparent 18px,
+      rgba(212, 160, 192, 0.2) 18px,
+      rgba(212, 160, 192, 0.2) 19px,
+      transparent 19px,
+      transparent 36px
+    );
+  mask-image: radial-gradient(ellipse at 50% 40%, black 30%, transparent 70%);
+  -webkit-mask-image: radial-gradient(ellipse at 50% 40%, black 30%, transparent 70%);
+  transition: opacity 0.5s ease;
+}
+
+.line-vibe-card[data-line="women"]:hover::after {
+  opacity: 0.10;
+}
+
+/* Men & Unisex: Geometric — sharp diamonds and chevrons */
+.line-vibe-card[data-line="men"]::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.05;
+  background:
+    /* Diamond grid */
+    repeating-linear-gradient(
+      45deg,
+      transparent 0px,
+      transparent 24px,
+      rgba(201, 162, 75, 0.4) 24px,
+      rgba(201, 162, 75, 0.4) 25px,
+      transparent 25px,
+      transparent 48px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      transparent 0px,
+      transparent 24px,
+      rgba(26, 58, 92, 0.5) 24px,
+      rgba(26, 58, 92, 0.5) 25px,
+      transparent 25px,
+      transparent 48px
+    ),
+    /* Byzantine chevron bands */
+    repeating-linear-gradient(
+      120deg,
+      transparent 0px,
+      transparent 36px,
+      rgba(196, 106, 74, 0.2) 36px,
+      rgba(196, 106, 74, 0.2) 37px,
+      transparent 37px,
+      transparent 72px
+    ),
+    /* Subdued horizontal strata */
+    repeating-linear-gradient(
+      0deg,
+      transparent 0px,
+      transparent 14px,
+      rgba(138, 127, 110, 0.15) 14px,
+      rgba(138, 127, 110, 0.15) 15px,
+      transparent 15px,
+      transparent 28px
+    );
+  mask-image: radial-gradient(ellipse at 50% 40%, black 25%, transparent 70%);
+  -webkit-mask-image: radial-gradient(ellipse at 50% 40%, black 25%, transparent 70%);
+  transition: opacity 0.5s ease;
+}
+
+.line-vibe-card[data-line="men"]:hover::after {
+  opacity: 0.08;
+}
+
+/* Kids: Playful Gaudí — colorful dotted mosaic tiles */
+.line-vibe-card[data-line="kids"]::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.07;
+  background:
+    /* Dot grid mosaic */
+    radial-gradient(circle at 10% 10%, rgba(212, 90, 26, 0.5) 2px, transparent 2px),
+    radial-gradient(circle at 30% 25%, rgba(44, 166, 232, 0.5) 3px, transparent 3px),
+    radial-gradient(circle at 55% 15%, rgba(232, 196, 44, 0.4) 2px, transparent 2px),
+    radial-gradient(circle at 80% 30%, rgba(232, 106, 44, 0.4) 3px, transparent 3px),
+    radial-gradient(circle at 15% 55%, rgba(44, 166, 232, 0.3) 2px, transparent 2px),
+    radial-gradient(circle at 45% 50%, rgba(212, 90, 26, 0.4) 3px, transparent 3px),
+    radial-gradient(circle at 70% 60%, rgba(232, 196, 44, 0.3) 2px, transparent 2px),
+    radial-gradient(circle at 90% 45%, rgba(232, 106, 44, 0.3) 3px, transparent 3px),
+    radial-gradient(circle at 25% 80%, rgba(212, 90, 26, 0.3) 2px, transparent 2px),
+    radial-gradient(circle at 60% 85%, rgba(44, 166, 232, 0.4) 3px, transparent 3px),
+    radial-gradient(circle at 85% 75%, rgba(232, 196, 44, 0.3) 2px, transparent 2px),
+    /* Irregular organic blobs mimicking tile shapes */
+    repeating-conic-gradient(
+      from 45deg at 50% 60%,
+      transparent 0deg,
+      transparent 80deg,
+      rgba(212, 90, 26, 0.15) 80deg,
+      rgba(44, 166, 232, 0.10) 81deg,
+      transparent 81deg,
+      transparent 160deg,
+      rgba(232, 196, 44, 0.12) 160deg,
+      rgba(232, 106, 44, 0.08) 161deg,
+      transparent 161deg,
+      transparent 360deg
+    );
+  mask-image: radial-gradient(ellipse at 50% 40%, black 30%, transparent 70%);
+  -webkit-mask-image: radial-gradient(ellipse at 50% 40%, black 30%, transparent 70%);
+  transition: opacity 0.5s ease;
+}
+
+.line-vibe-card[data-line="kids"]:hover::after {
+  opacity: 0.12;
+}
+
+/* Make sure card content sits above the pattern */
+.line-vibe-bar,
+.line-vibe-icon,
+.line-vibe-name,
+.line-vibe-subtitle,
+.line-vibe-tags,
+.line-vibe-swatches,
+.line-vibe-desc,
+.line-vibe-mood {
+  position: relative;
+  z-index: 1;
+}
+
+/* Mood quote */
+.line-vibe-mood {
+  font-size: 0.82rem;
+  color: var(--text);
+  font-style: italic;
+  line-height: 1.6;
+  padding: 12px 16px;
+  border-radius: 10px;
+  background: var(--line-light);
+  border-left: 3px solid var(--line-c);
+  max-width: 320px;
+  text-align: left;
+}
+
 /* About */
 .about {
   padding: 70px 20px;
@@ -464,6 +1313,15 @@ button {
   border: none;
   cursor: pointer;
   box-shadow: 0 10px 28px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.4s ease, transform 0.3s ease;
+}
+
+.category-tile[data-line="women"] { --line-c: var(--line-women); --line-glow: var(--line-women-glow); }
+.category-tile[data-line="men"]   { --line-c: var(--line-men);   --line-glow: var(--line-men-glow); }
+.category-tile[data-line="kids"]  { --line-c: var(--line-kids);  --line-glow: var(--line-kids-glow); }
+
+.category-tile:hover {
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.15), 0 0 40px var(--line-glow);
 }
 
 .category-tile-bg {
@@ -482,6 +1340,18 @@ button {
   background: linear-gradient(to top, rgba(10, 10, 10, 0.75), rgba(10, 10, 10, 0.1));
 }
 
+.category-tile[data-line="women"]::after {
+  background: linear-gradient(to top, rgba(138, 26, 94, 0.70), rgba(10, 10, 10, 0.1));
+}
+
+.category-tile[data-line="men"]::after {
+  background: linear-gradient(to top, rgba(26, 58, 92, 0.70), rgba(10, 10, 10, 0.1));
+}
+
+.category-tile[data-line="kids"]::after {
+  background: linear-gradient(to top, rgba(212, 90, 26, 0.60), rgba(10, 10, 10, 0.1));
+}
+
 .category-tile:hover .category-tile-bg { transform: scale(1.08); }
 
 .category-tile-label {
@@ -493,6 +1363,23 @@ button {
   font-family: "Playfair Display", serif;
   font-size: 1.3rem;
   font-weight: 700;
+}
+
+.category-tile-label::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 10px;
+  vertical-align: middle;
+  background: var(--line-c);
+  box-shadow: 0 0 12px var(--line-glow);
+  transition: transform 0.3s ease;
+}
+
+.category-tile:hover .category-tile-label::before {
+  transform: scale(1.35);
 }
 
 /* Editorial rows (New Arrivals, Trending Now, Premium Essentials, Limited Collections) */
@@ -533,6 +1420,20 @@ button {
   overflow: hidden;
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.1);
   cursor: pointer;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carousel-card[data-line="women"] { --line-c: var(--line-women); --line-light: var(--line-women-light); }
+.carousel-card[data-line="men"]   { --line-c: var(--line-men);   --line-light: var(--line-men-light); }
+.carousel-card[data-line="kids"]  { --line-c: var(--line-kids);  --line-light: var(--line-kids-light); }
+
+.carousel-card[data-line]:hover {
+  border-color: var(--line-c);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.1), 0 0 24px var(--line-light);
+}
+
+.carousel-card[data-line] .badge-new {
+  background: var(--line-c, var(--blue));
 }
 
 .badge-new {
@@ -549,6 +1450,10 @@ button {
   padding: 4px 10px;
   border-radius: 999px;
 }
+
+.badge-new[data-line="women"]  { background: var(--line-women); }
+.badge-new[data-line="men"]    { background: var(--line-men); }
+.badge-new[data-line="kids"]   { background: var(--line-kids); }
 
 .carousel-image { height: 280px; background-color: var(--placeholder-bg); background-size: cover; background-position: center; }
 .carousel-info { padding: 14px; }
@@ -615,6 +1520,19 @@ button {
 .filter-pill:hover { background: rgba(217, 79, 134, 0.1); }
 .filter-pill.active { background: var(--pink); color: #fff; }
 
+.filter-pill[data-line="women"] { --line-c: var(--line-women); --line-light: var(--line-women-light); }
+.filter-pill[data-line="men"]   { --line-c: var(--line-men);   --line-light: var(--line-men-light); }
+.filter-pill[data-line="kids"]  { --line-c: var(--line-kids);  --line-light: var(--line-kids-light); }
+
+.filter-pill[data-line]:hover {
+  background: var(--line-light);
+}
+
+.filter-pill[data-line].active {
+  background: var(--line-c);
+  color: #fff;
+}
+
 .product-grid {
   flex: 1;
   display: grid;
@@ -631,7 +1549,56 @@ button {
   overflow: hidden;
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
   backdrop-filter: blur(8px);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
+
+/* LineVibe accent bar across card top */
+.product-card[data-line="women"] { --line-c: var(--line-women); --line-light: var(--line-women-light); }
+.product-card[data-line="men"]   { --line-c: var(--line-men);   --line-light: var(--line-men-light); }
+.product-card[data-line="kids"]  { --line-c: var(--line-kids);  --line-light: var(--line-kids-light); }
+
+.product-card[data-line]::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--line-c);
+  z-index: 3;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.product-card[data-line]:hover::before {
+  opacity: 1;
+}
+
+.product-card[data-line]:hover {
+  border-color: var(--line-c);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08), 0 0 24px var(--line-light);
+}
+
+/* Category dot in eyebrow */
+.eyebrow-line {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.eyebrow-line::before {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--line-c, var(--pink));
+  flex-shrink: 0;
+}
+
+.eyebrow-line[data-line="women"]  { --line-c: var(--line-women); }
+.eyebrow-line[data-line="men"]    { --line-c: var(--line-men); }
+.eyebrow-line[data-line="kids"]   { --line-c: var(--line-kids); }
 
 .wishlist-btn {
   position: absolute;
@@ -1002,6 +1969,8 @@ button {
   .nav-links.open { display: flex; }
   .nav-links a { margin: 0; padding: 12px 14px; border-top: 1px solid rgba(255, 255, 255, 0.08); }
   .nav-links a:first-child { border-top: none; }
+
+  .line-vibe-grid { grid-template-columns: 1fr; }
 
   .category-grid { grid-template-columns: 1fr; }
   .shop-layout { flex-direction: column; }
