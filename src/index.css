@@ -1681,14 +1681,27 @@ button {
 .footer-admin-link { display: inline-block; margin-top: 8px; color: var(--muted-text); font-size: 0.78rem; text-decoration: none; opacity: 0.7; }
 .footer-admin-link:hover { opacity: 1; text-decoration: underline; }
 
-/* Mobile */
+/* ── Tablet: 769–1024px ── */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .line-vibe-grid { grid-template-columns: repeat(2, 1fr); }
+  .category-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .vibe-hero { padding: 120px 20px 70px; }
+  .vibe-hero-title { font-size: 2.2rem; }
+  .vibe-hero-heading { font-size: 2rem; }
+  .vibe-hero-sub { font-size: 1rem; }
+}
+
+/* ── Mobile: up to 768px ── */
 @media (max-width: 768px) {
+  body { overflow-x: hidden; }
   .nav-toggle { display: block; }
   .nav-bar--centered { flex-wrap: wrap; }
+  .site-header { padding: 10px 8px 0; }
 
   .logo--centered { order: 1; flex: 1; justify-content: center; }
   .nav-links { order: 4; }
-  .nav-utility { order: 2; flex: 0 0 auto; gap: 8px; }
+  .nav-utility { order: 2; flex: 0 0 auto; gap: 6px; }
   .nav-utility > .nav-search { display: none; }
 
   .nav-search--mobile { display: block; margin-bottom: 8px; }
@@ -1714,21 +1727,156 @@ button {
   .nav-links a { margin: 0; padding: 12px 14px; border-top: 1px solid rgba(255, 255, 255, 0.08); }
   .nav-links a:first-child { border-top: none; }
 
-  .line-vibe-grid { grid-template-columns: 1fr; }
+  /* VibeHero */
+  .vibe-hero {
+    padding: 120px 16px 70px;
+    min-height: 100svh;
+  }
+  .vibe-hero-title { font-size: 1.8rem; }
+  .vibe-hero-heading { font-size: 1.8rem; }
+  .vibe-hero-sub { font-size: 0.95rem; }
+  .vibe-hero-mood { font-size: 0.9rem; }
+  .vibe-hero-icon { width: 60px; height: 60px; font-size: 2.2rem; }
+  .vibe-hero-content { min-height: 300px; }
+  .vibe-hero-plaque { width: 130px; }
+  .vibe-hero-tagline { font-size: 0.75rem; }
 
+  /* Scale down decorative orbs on mobile */
+  .vibe-hero-orb--pink,
+  .vibe-hero-orb--blue { width: 120px; height: 120px; filter: blur(60px); opacity: 0.2; }
+  .vibe-hero-orb--pink { top: 5%; left: 3%; }
+  .vibe-hero-orb--blue { width: 140px; height: 140px; bottom: 3%; right: 3%; }
+  .vibe-hero-orb { display: none; }
+
+  /* Progress footer */
+  .vibe-hero-footer { bottom: 24px; }
+
+  /* LineVibe */
+  .line-vibe-grid { grid-template-columns: 1fr; }
+  .line-vibes { padding: 40px 16px; }
+  .line-vibe-canvas { height: 120px; }
+  .line-vibe-info { padding: 16px 16px 20px; }
+
+  /* Section padding */
+  .editorial-row { padding: 40px 16px; }
+  .categories { padding: 40px 16px; }
+  .about { padding: 40px 16px; }
+  .shop { padding: 40px 16px; }
+  .build-your-look { padding: 40px 16px; }
+  .vip-elite { padding: 40px 16px; }
+  .customer-gallery { padding: 40px 16px; }
+  .testimonials { padding: 40px 16px; }
+  .contact { padding: 50px 16px; }
+  .site-footer { padding: 40px 16px 20px; }
+
+  .section-title { font-size: 1.4rem; }
+  .section-head { flex-direction: column; gap: 10px; align-items: flex-start; }
+
+  /* Category tiles */
   .category-grid { grid-template-columns: 1fr; }
+  .category-tile { height: 200px; }
+
+  /* Shop */
   .shop-layout { flex-direction: column; }
   .filter-rail { position: static; width: 100%; flex-direction: column; }
   .filter-pills { flex-direction: row; overflow-x: auto; padding-bottom: 4px; }
   .filter-pill { flex-shrink: 0; }
 
+  /* Product grid */
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .product-info { padding: 12px; }
+  .product-info h3 { font-size: 0.95rem; }
+  .price { font-size: 0.9rem; }
+  .desc { font-size: 0.82rem; }
+  .flip-btn { font-size: 0.65rem; padding: 4px 8px; }
+
+  /* Editorial carousel */
+  .carousel-card { flex: 0 0 180px; }
+  .carousel-image { height: 220px; }
+
+  /* Quickview */
   .quickview-panel { grid-template-columns: 1fr; }
   .quickview-image { min-height: 200px; }
+  .quickview-details { padding: 20px; }
+  .quickview-details h3 { font-size: 1.2rem; }
   .related-items-row { flex-direction: column; }
 
+  /* Outfit builder */
   .outfit-builder { grid-template-columns: 1fr; }
 
-  .footer-grid { grid-template-columns: 1fr; }
+  /* VIP */
+  .vip-card { padding: 28px 20px; }
+  .vip-card h2 { font-size: 1.4rem; }
+
+  /* Footer */
+  .footer-grid { grid-template-columns: 1fr; gap: 24px; }
+  .footer-nav, .footer-signup { gap: 6px; }
 
   .contact-actions { flex-direction: column; }
+  .contact-actions .btn,
+  .contact-actions .btn-whatsapp { width: 100%; text-align: center; }
+
+  .section-sub { margin-bottom: 24px; }
+}
+
+/* ── Small phones: up to 480px ── */
+@media (max-width: 480px) {
+  .site-header { padding: 8px 4px 0; }
+  .nav-bar { padding: 8px 12px; gap: 8px; border-radius: 40px; }
+  .nav-bar--shrunk { padding: 6px 12px; }
+  .nav-utility { gap: 4px; }
+  .nav-icon-btn,
+  .theme-toggle { width: 32px; height: 32px; font-size: 0.85rem; }
+  .logo-text { font-size: 0.95rem; }
+
+  /* Hero */
+  .vibe-hero { padding: 110px 12px 60px; }
+  .vibe-hero-title { font-size: 1.4rem; }
+  .vibe-hero-heading { font-size: 1.4rem; }
+  .vibe-hero-sub { font-size: 0.85rem; }
+  .vibe-hero-mood { font-size: 0.85rem; }
+  .vibe-hero-icon { width: 50px; height: 50px; font-size: 1.8rem; }
+  .vibe-hero-content { min-height: 260px; }
+  .vibe-hero-progress { width: 120px; }
+  .vibe-hero-footer { bottom: 16px; gap: 8px; }
+
+  .nav-links a { padding: 10px 12px; font-size: 0.85rem; }
+
+  .line-vibe-canvas { height: 100px; }
+
+  .category-tile { height: 160px; }
+  .category-tile-label { font-size: 1rem; }
+
+  .product-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+
+  .carousel-card { flex: 0 0 150px; }
+  .carousel-image { height: 180px; }
+  .carousel-info { padding: 10px; }
+
+  .badge-new { font-size: 0.6rem; padding: 3px 8px; top: 8px; left: 8px; }
+
+  .vip-card { padding: 24px 16px; }
+  .vip-benefits { gap: 6px; }
+
+  .testimonial-placeholder { padding: 24px 16px; }
+
+  .gallery-empty-card { padding: 28px 20px; }
+
+  .outfit-summary { padding: 16px; }
+
+  .section-title { font-size: 1.2rem; }
+
+  .footer-grid { gap: 18px; }
+}
+
+/* ── Edit-row pill visibility: prevent hanging on small screens ── */
+@media (max-width: 360px) {
+  .nav-bar { border-radius: 30px; padding: 6px 10px; }
+  .logo-text { font-size: 0.85rem; }
+  .vibe-hero-title { font-size: 1.2rem; }
+  .vibe-hero-heading { font-size: 1.2rem; }
+  .product-grid { grid-template-columns: 1fr; }
 }
