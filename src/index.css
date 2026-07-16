@@ -905,7 +905,7 @@ button {
   color: #2a1d00;
 }
 
-/* LineVibe Section */
+/* ── LineVibe Section: Art-First Cards ── */
 .line-vibes {
   padding: 70px 20px;
   background: var(--surface);
@@ -923,12 +923,9 @@ button {
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
   background: var(--bg);
   border: 1px solid var(--surface-border);
   border-radius: 16px;
-  padding: 36px 24px 28px;
   overflow: hidden;
   transition: box-shadow 0.4s ease, transform 0.3s ease, border-color 0.3s ease;
 }
@@ -943,38 +940,61 @@ button {
   transform: translateY(-4px);
 }
 
-/* Top accent bar */
-.line-vibe-bar {
+/* ── Mosaic Art Canvas ── */
+.line-vibe-canvas {
+  position: relative;
+  width: 100%;
+  height: 160px;
+  background: var(--line-light);
+  overflow: hidden;
+  flex-shrink: 0;
+  transition: background-size 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+              background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.line-vibe-card:hover .line-vibe-canvas {
+  background-size: 105% 105%;
+  background-position: 52% 44%;
+}
+
+.mosaic-art {
   position: absolute;
-  top: 0;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  color: var(--line-c);
+  transform-origin: 50% 40%;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.line-vibe-card:hover .mosaic-art {
+  transform: scale(1.08);
+}
+
+.line-vibe-canvas-overlay {
+  position: absolute;
+  bottom: 0;
   left: 0;
   right: 0;
-  height: 4px;
-  background: var(--line-c);
-  border-radius: 16px 16px 0 0;
+  height: 50%;
+  background: linear-gradient(to top, var(--bg), transparent);
+  pointer-events: none;
+  transition: opacity 0.5s ease;
 }
 
-/* Icon */
-.line-vibe-icon {
-  font-size: 2.4rem;
-  margin-bottom: 12px;
-  width: 64px;
-  height: 64px;
+.line-vibe-card:hover .line-vibe-canvas-overlay {
+  opacity: 0.7;
+}
+
+/* ── Info section ── */
+.line-vibe-info {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background: var(--line-light);
-  color: var(--line-c);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  padding: 20px 20px 24px;
 }
 
-.line-vibe-card:hover .line-vibe-icon {
-  transform: scale(1.08);
-  box-shadow: 0 0 20px var(--line-mid);
-}
-
-/* Name + subtitle */
 .line-vibe-name {
   font-family: "Playfair Display", serif;
   font-size: 1.3rem;
@@ -989,16 +1009,15 @@ button {
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 
-/* Tagline pills */
 .line-vibe-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
   justify-content: center;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 .line-vibe-tag {
@@ -1013,7 +1032,6 @@ button {
   border: 1px solid var(--line-mid);
 }
 
-/* Color swatches */
 .line-vibe-swatches {
   display: flex;
   gap: 8px;
@@ -1038,10 +1056,7 @@ button {
 .line-vibe-card:hover .line-vibe-swatch:nth-child(3) { transition-delay: 0.06s; }
 .line-vibe-card:hover .line-vibe-swatch:nth-child(4) { transition-delay: 0.09s; }
 
-/* Description */
 .line-vibe-learn {
-  position: relative;
-  z-index: 1;
   display: inline-block;
   background: var(--line-light);
   color: var(--line-c);
@@ -1053,7 +1068,6 @@ button {
   cursor: pointer;
   font-family: inherit;
   transition: background 0.25s ease, color 0.25s ease, transform 0.2s ease, box-shadow 0.2s ease;
-  margin-top: 12px;
 }
 
 .line-vibe-learn:hover {
@@ -1063,214 +1077,26 @@ button {
   box-shadow: 0 6px 18px var(--line-mid);
 }
 
-.line-vibe-desc {
-  font-size: 0.9rem;
-  color: var(--muted-text);
-  line-height: 1.65;
-  margin-bottom: 14px;
-  max-width: 320px;
-}/* ── Decorative mosaic SVG corners ── */
-.line-vibe-mosaic {
-  position: absolute;
-  z-index: 0;
-  pointer-events: none;
-  color: var(--line-c);
-  transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.line-vibe-mosaic--tl {
-  top: 0;
-  left: 0;
-}
-
-.line-vibe-mosaic--br {
-  bottom: 0;
-  right: 0;
-}
-
-.line-vibe-card:hover .line-vibe-mosaic {
-  opacity: 1;
-  transform: scale(1.05);
-}
-
-/* ── Mosaic background patterns ── */
-
-/* Women: Art Nouveau — flowing organic curves like stained glass */
-.line-vibe-card[data-line="women"]::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  opacity: 0.06;
+/* ── CSS pattern behind the art (deeper glow) ── */
+.line-vibe-card[data-line="women"] .line-vibe-canvas {
   background:
-    /* S-curve flow lines */
-    repeating-linear-gradient(
-      100deg,
-      transparent 0px,
-      transparent 40px,
-      rgba(201, 162, 75, 0.5) 40px,
-      rgba(201, 162, 75, 0.5) 41px,
-      transparent 41px,
-      transparent 80px
-    ),
-    repeating-linear-gradient(
-      260deg,
-      transparent 0px,
-      transparent 30px,
-      rgba(138, 26, 94, 0.4) 30px,
-      rgba(138, 26, 94, 0.4) 31px,
-      transparent 31px,
-      transparent 60px
-    ),
-    /* Organic radial blobs */
-    radial-gradient(circle at 20% 30%, rgba(201, 162, 75, 0.6) 0%, transparent 50%),
-    radial-gradient(circle at 80% 70%, rgba(107, 47, 160, 0.4) 0%, transparent 40%),
-    /* Wavy horizontal bands */
-    repeating-linear-gradient(
-      0deg,
-      transparent 0px,
-      transparent 18px,
-      rgba(212, 160, 192, 0.2) 18px,
-      rgba(212, 160, 192, 0.2) 19px,
-      transparent 19px,
-      transparent 36px
-    );
-  mask-image: radial-gradient(ellipse at 50% 40%, black 30%, transparent 70%);
-  -webkit-mask-image: radial-gradient(ellipse at 50% 40%, black 30%, transparent 70%);
-  transition: opacity 0.5s ease;
+    radial-gradient(ellipse at 30% 40%, rgba(201, 162, 75, 0.3) 0%, transparent 60%),
+    radial-gradient(ellipse at 70% 60%, rgba(107, 47, 160, 0.2) 0%, transparent 50%),
+    var(--line-light);
 }
 
-.line-vibe-card[data-line="women"]:hover::after {
-  opacity: 0.10;
-}
-
-/* Men & Unisex: Geometric — sharp diamonds and chevrons */
-.line-vibe-card[data-line="men"]::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  opacity: 0.05;
+.line-vibe-card[data-line="men"] .line-vibe-canvas {
   background:
-    /* Diamond grid */
-    repeating-linear-gradient(
-      45deg,
-      transparent 0px,
-      transparent 24px,
-      rgba(201, 162, 75, 0.4) 24px,
-      rgba(201, 162, 75, 0.4) 25px,
-      transparent 25px,
-      transparent 48px
-    ),
-    repeating-linear-gradient(
-      -45deg,
-      transparent 0px,
-      transparent 24px,
-      rgba(26, 58, 92, 0.5) 24px,
-      rgba(26, 58, 92, 0.5) 25px,
-      transparent 25px,
-      transparent 48px
-    ),
-    /* Byzantine chevron bands */
-    repeating-linear-gradient(
-      120deg,
-      transparent 0px,
-      transparent 36px,
-      rgba(196, 106, 74, 0.2) 36px,
-      rgba(196, 106, 74, 0.2) 37px,
-      transparent 37px,
-      transparent 72px
-    ),
-    /* Subdued horizontal strata */
-    repeating-linear-gradient(
-      0deg,
-      transparent 0px,
-      transparent 14px,
-      rgba(138, 127, 110, 0.15) 14px,
-      rgba(138, 127, 110, 0.15) 15px,
-      transparent 15px,
-      transparent 28px
-    );
-  mask-image: radial-gradient(ellipse at 50% 40%, black 25%, transparent 70%);
-  -webkit-mask-image: radial-gradient(ellipse at 50% 40%, black 25%, transparent 70%);
-  transition: opacity 0.5s ease;
+    conic-gradient(from 45deg at 50% 50%, transparent 0deg, rgba(201, 162, 75, 0.1) 90deg, transparent 180deg, rgba(196, 106, 74, 0.08) 270deg, transparent 360deg),
+    var(--line-light);
 }
 
-.line-vibe-card[data-line="men"]:hover::after {
-  opacity: 0.08;
-}
-
-/* Kids: Playful Gaudí — colorful dotted mosaic tiles */
-.line-vibe-card[data-line="kids"]::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  opacity: 0.07;
+.line-vibe-card[data-line="kids"] .line-vibe-canvas {
   background:
-    /* Dot grid mosaic */
-    radial-gradient(circle at 10% 10%, rgba(212, 90, 26, 0.5) 2px, transparent 2px),
-    radial-gradient(circle at 30% 25%, rgba(44, 166, 232, 0.5) 3px, transparent 3px),
-    radial-gradient(circle at 55% 15%, rgba(232, 196, 44, 0.4) 2px, transparent 2px),
-    radial-gradient(circle at 80% 30%, rgba(232, 106, 44, 0.4) 3px, transparent 3px),
-    radial-gradient(circle at 15% 55%, rgba(44, 166, 232, 0.3) 2px, transparent 2px),
-    radial-gradient(circle at 45% 50%, rgba(212, 90, 26, 0.4) 3px, transparent 3px),
-    radial-gradient(circle at 70% 60%, rgba(232, 196, 44, 0.3) 2px, transparent 2px),
-    radial-gradient(circle at 90% 45%, rgba(232, 106, 44, 0.3) 3px, transparent 3px),
-    radial-gradient(circle at 25% 80%, rgba(212, 90, 26, 0.3) 2px, transparent 2px),
-    radial-gradient(circle at 60% 85%, rgba(44, 166, 232, 0.4) 3px, transparent 3px),
-    radial-gradient(circle at 85% 75%, rgba(232, 196, 44, 0.3) 2px, transparent 2px),
-    /* Irregular organic blobs mimicking tile shapes */
-    repeating-conic-gradient(
-      from 45deg at 50% 60%,
-      transparent 0deg,
-      transparent 80deg,
-      rgba(212, 90, 26, 0.15) 80deg,
-      rgba(44, 166, 232, 0.10) 81deg,
-      transparent 81deg,
-      transparent 160deg,
-      rgba(232, 196, 44, 0.12) 160deg,
-      rgba(232, 106, 44, 0.08) 161deg,
-      transparent 161deg,
-      transparent 360deg
-    );
-  mask-image: radial-gradient(ellipse at 50% 40%, black 30%, transparent 70%);
-  -webkit-mask-image: radial-gradient(ellipse at 50% 40%, black 30%, transparent 70%);
-  transition: opacity 0.5s ease;
-}
-
-.line-vibe-card[data-line="kids"]:hover::after {
-  opacity: 0.12;
-}
-
-/* Make sure card content sits above the pattern */
-.line-vibe-bar,
-.line-vibe-icon,
-.line-vibe-name,
-.line-vibe-subtitle,
-.line-vibe-tags,
-.line-vibe-swatches,
-.line-vibe-desc,
-.line-vibe-mood {
-  position: relative;
-  z-index: 1;
-}
-
-/* Mood quote */
-.line-vibe-mood {
-  font-size: 0.82rem;
-  color: var(--text);
-  font-style: italic;
-  line-height: 1.6;
-  padding: 12px 16px;
-  border-radius: 10px;
-  background: var(--line-light);
-  border-left: 3px solid var(--line-c);
-  max-width: 320px;
-  text-align: left;
+    radial-gradient(circle at 20% 30%, rgba(212, 90, 26, 0.15) 0%, transparent 30%),
+    radial-gradient(circle at 60% 50%, rgba(44, 166, 232, 0.12) 0%, transparent 35%),
+    radial-gradient(circle at 85% 20%, rgba(232, 196, 44, 0.10) 0%, transparent 25%),
+    var(--line-light);
 }
 
 /* About */
